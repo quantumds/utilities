@@ -536,3 +536,54 @@ completeness
 completeness[1]
 completeness[0]
 list(completeness.index)[1]
+
+
+d1 = plms.iloc[: , 0:5769495].values.astype(np.str)
+d1 = plms.iloc[: , 0:int(((len(plms))/8))].values.astype(np.str)
+
+
+X.values[:, 3] = labelencoder_X.fit_transform(X.values[:, 3])
+
+
+from dask import dataframe as dd
+sd = dd.from_pandas(plms, npartitions=3)
+print (sd)
+dd.DataFrame<from_pa..., npartitions=2, divisions=(0, 1, 2)>
+EDIT:
+
+I find solution:
+
+import pandas as pd
+import dask.dataframe as dd
+from dask.dataframe.utils import make_meta
+
+df = pd.DataFrame({'a':[1,2,3],'b':[4,5,6]})
+dsk = {('x', 0): df}
+
+meta = make_meta({'a': 'i8', 'b': 'i8'}, index=pd.Index([], 'i8'))
+d = dd.DataFrame(dsk, name='x', meta=meta, divisions=[0, 1, 2])
+print (d)
+dd.DataFrame<x, npartitions=2, divisions=(0, 1, 2)>
+
+
+
+
+
+
+
+
+
+
+
+ plms.iloc[:, 0:4].values
+plms.iloc[:, 4]
+X=dataset.iloc[:, 0:4]
+
+d2 = data[:, n/2:].astype('float')
+
+data = np.hstack(d1, d2)
+
+len(plms.columns)
+len(plms)
+
+
