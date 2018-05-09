@@ -1,3 +1,12 @@
+# CREATION OF A MOCK DATAFRAME
+# Option 1: 
+x = [1,1000,1001]
+y = [200,300,400]
+cat = ['first','second','third']
+df = pd.DataFrame(dict(speed = x, price = y, place = cat))
+
+
+
 # frequency table for categorical or boolean type
 plms['isfiller'].value_counts()
 
@@ -9,7 +18,10 @@ completeness_dqss = 100 - dqss.isnull().sum()/len(dqss)*100
 # Convert completeness_plms into data frames:
 x = list(completeness_plms.index)
 y = completeness_plms
-df_completeness_plms = pd.DataFrame(dict(x=x, y=y))
+df_completeness_plms = 
+
+
+Frame(dict(x=x, y=y))
 df_completeness_plms.columns = ['variable', 'complete_metric']
 # Create vertical bar plot: factorplot:
 g = sns.factorplot("variable","complete_metric", data=df_completeness_plms,kind="bar",palette="Blues",size=6,aspect=2,legend_out=False)
@@ -160,11 +172,7 @@ list(df.index)
 # See names of columns
 list(df)
 
-# Other form of creating a data frame: 
-x = [1,1000,1001]
-y = [200,300,400]
-cat = ['first','second','third']
-df = pd.DataFrame(dict(x=x, y=y,cat=cat))
+
 
 # creating factor plots
 x = [1,1000,1001]
