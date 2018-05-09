@@ -5,11 +5,10 @@ y = [200,300,400]
 cat = ['first','second','third']
 df = pd.DataFrame(dict(speed = x, price = y, place = cat))
 
-
-
-# frequency table for categorical or boolean type
+# FREQUENCY TABLES
 plms['isfiller'].value_counts()
 
+# DATA QUALITY FUNCTIONS
 # 1. Completeness
 # PLMS
 # First we create the dataframes with the information:
