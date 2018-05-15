@@ -4,5 +4,6 @@ df = spark.read.parquet(route_of_your_parquet_file)
 df.show(n=4) # n = number of lines that you want to see in the header of the file
 # OBTAIN COLUMN TYPES
 df.printSchema()
+df.dtypes # Does the same
 # VIEW DATAFRAMES
 display(df)
