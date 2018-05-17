@@ -35,6 +35,7 @@ perf = perf.select([col(c).cast(StringType()).alias(c) for c in perf_to_str])
 type_your_markdown_lines
 [close_the_cell_you_are_in]
 
-
+# EDIT MARKDOWN CELL
+[Do double-click inside the cell]
 
 
