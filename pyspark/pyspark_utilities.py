@@ -20,6 +20,12 @@ display(df)
 # HEAD OF DATAFRAMES
 df.show(4)
 
+# ACCESS ELEMENT OF A SPARK DATAFRAME
+# Access row number 5 of mock variable: "Variable_1"
+df.where(df.id == 5).select('Variable_1').collect()[0]['Variable_1'] 
+# To access a single value of a Spark DataFrame you need to first create an index column, standardized with the name 'id':
+df = df.withColumn("id", monotonicallyIncreasingId())
+
 # DATA TYPE CONVERSION
 from pyspark.sql.types import IntegerType
 df = df.withColumn("name_of_column", df["name_of_column"].cast(StringType()))
