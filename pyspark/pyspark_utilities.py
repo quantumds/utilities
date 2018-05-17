@@ -10,8 +10,15 @@ df.dtypes # Does the same
 # OBTAIN COLUMN NAMES
 df.schema.names
 
+# NUMBER OF ROWS OF A SPARK DATAFRAME
+df.count()
+# NUMBER OF COLUMNS OF A SPARK DATAFRAME
+len(df.columns)
+
 # VIEW DATAFRAMES
 display(df)
+# HEAD OF DATAFRAMES
+df.show(4)
 
 # DATA TYPE CONVERSION
 from pyspark.sql.types import IntegerType
