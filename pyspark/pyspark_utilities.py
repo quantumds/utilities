@@ -7,8 +7,9 @@ df.show(n=4) # n = number of lines that you want to see in the header of the fil
 df.printSchema()
 df.dtypes # Does the same
 
-# OBTAIN COLUMN NAMES
+# OBTAIN COLUMN NAMES / LIST COLUMN NAMES / LIST COLUMNS
 df.schema.names
+df.columns
 
 # NUMBER OF ROWS OF A SPARK DATAFRAME
 df.count()
@@ -30,7 +31,8 @@ df = df.withColumn("id", monotonicallyIncreasingId())
 
 
 # MISSING VALUES / COUNT NUMBER OF MISSINGS
-ff.select(*(sum(col(c).isNull().cast("int")).alias(c) for c in df.columns)).show()
+df.select(*(sum(col(c).isNull().cast("int")).alias(c) for c in df.columns)).show() # prints it trough console
+df.select(*(sum(col(c).isNull().cast("int")).alias(c) for c in df.columns)) # saves it as a dataframe
 
 # DATA TYPE CONVERSION
 from pyspark.sql.types import IntegerType
