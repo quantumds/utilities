@@ -1,9 +1,23 @@
 # CREATE NEW DATA FRAME
+# One way to do it:
 df = sc.parallelize( [ (1,'female',233), 
                       (None,'female',314),
                       (0,'female',81),
                       (1, None, 342), 
                       (1, 'male', 109)]).toDF().withColumnRenamed("_1","survived").withColumnRenamed("_2","sex").withColumnRenamed("_3","count")
+# Other way to do it:
+df = spark.createDataFrame(
+    [
+     (1, 1.87, 'new_york'), 
+     (4, 2.76, 'la'), 
+     (6, 3.3, 'boston'), 
+     (8, 4.1, 'detroit'), 
+     (2, 5.70, 'miami'), 
+     (3, 6.320, 'atlanta'), 
+     (1, 6.1, 'houston')
+    ],
+    ('variable_1', "variable_2", "variable_3")
+)
 
 # LOAD PARQUET FILES
 df = spark.read.parquet(route_of_your_parquet_file)
