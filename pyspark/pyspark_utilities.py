@@ -30,7 +30,10 @@ df = df.withColumn("id", monotonicallyIncreasingId())
 # ASSIGNING PARTICULAR VALUE TO A CELL DATAFRAME / ASSIGNATION
 # We are supposing that our df has 3 variables, and we want to change the cell of variable_3:
 df = df.withColumn("variable_3", \ when(((df["variable_1"] == value_of_variable_1) & (df["variable_2"] == value_of_variable_2)) , new_value_of_variable_3).otherwise(df["variable_3"]))
-                   
+# Other form of writing it is putting a break line after the back slash:
+df = df.withColumn("variable_3", \ 
+                   when(((df["variable_1"] == value_of_variable_1) & (df["variable_2"] == value_of_variable_2)) , new_value_of_variable_3).otherwise(df["variable_3"]))
+
 # MISSING VALUES / COUNT NUMBER OF MISSINGS
 df.select(*(sum(col(c).isNull().cast("int")).alias(c) for c in df.columns)).show() # prints it trough console
 df.select(*(sum(col(c).isNull().cast("int")).alias(c) for c in df.columns)) # saves it as a dataframe
