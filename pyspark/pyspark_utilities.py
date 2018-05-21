@@ -1,3 +1,10 @@
+# CREATE NEW DATA FRAME
+df = sc.parallelize( [ (1,'female',233), 
+                      (None,'female',314),
+                      (0,'female',81),
+                      (1, None, 342), 
+                      (1, 'male', 109)]).toDF().withColumnRenamed("_1","survived").withColumnRenamed("_2","sex").withColumnRenamed("_3","count")
+
 # LOAD PARQUET FILES
 df = spark.read.parquet(route_of_your_parquet_file)
 # OBTAIN HEADER
