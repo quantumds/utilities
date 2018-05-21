@@ -29,8 +29,7 @@ df = df.withColumn("id", monotonicallyIncreasingId())
 
 # ASSIGNING PARTICULAR VALUE TO A CELL DATAFRAME / ASSIGNATION
 # We are supposing that our df has 3 variables, and we want to change the cell of variable_3:
-df = df.withColumn(i, \ 
-                   when(((df["variable_1"] == value_of_variable_1) & (df["variable_2"] == value_of_variable_2)) , (new_value_to_replace_the_old_one_of_variable_3).otherwise(df["variable_3"]))
+df = df.withColumn(i, \ when(((df["variable_1"] == value_of_variable_1) & (df["variable_2"] == value_of_variable_2)) , (new_value_to_replace_the_old_one_of_variable_3).otherwise(df["variable_3"]))
 
 # MISSING VALUES / COUNT NUMBER OF MISSINGS
 df.select(*(sum(col(c).isNull().cast("int")).alias(c) for c in df.columns)).show() # prints it trough console
