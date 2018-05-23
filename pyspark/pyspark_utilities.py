@@ -48,6 +48,10 @@ df.where(df.id == 5).select('Variable_1').collect()[0]['Variable_1']
 # To access a single value of a Spark DataFrame you need to first create an index column, standardized with the name 'id':
 df = df.withColumn("id", monotonicallyIncreasingId())
 
+# FILTER A DATAFRAME
+df.filter(df.name_of_variable > value_of_variable).collect()
+df.where(df.name_of_variable == value_of_variable).collect()
+
 # ASSIGNING PARTICULAR VALUE TO A CELL DATAFRAME / ASSIGNATION
 # We are supposing that our df has 3 variables, and we want to change the cell of variable_3:
 df = df.withColumn("variable_3", \ when(((df["variable_1"] == value_of_variable_1) & (df["variable_2"] == value_of_variable_2)) , new_value_of_variable_3).otherwise(df["variable_3"]))
