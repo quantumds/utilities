@@ -82,3 +82,13 @@ type_your_markdown_lines
 [Do double-click inside the cell]
 
 
+
+
+
+samples_only = samples_only.dropDuplicates(['idcrsampling'])
+promo.groupBy('EventText').count().show()
+samples.stat.crosstab("producttype", "defect").show()
+samples_def_f = samples.filter(samples.defect == 'false').collect()
+promo_only = promo_only.selectExpr("sn as sn", "IDEquipment as IDEquipment", "startdate as startdate", "EventCode as EventCode", "eventtext as eventtext", "analogval as analogval", "sampletime as samplingtime", "__index_level_0__ as __index_level_0__", "id as id")
+promo_sample_inner = promo_only.join(samples_only, on=['samplingtime', 'sn'], how='inner')
+
