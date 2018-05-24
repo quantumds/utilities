@@ -84,7 +84,7 @@ type_your_markdown_lines
 # SELECT ONLY STRING VARIABLES
 string_variables = [item[0] for item in df.dtypes if item[1].startswith('string')]
 
-# FREQUENCY TABLE OF DATA FRAME
+# FREQUENCY TABLE OF DATA FRAME / NUMBER OF LEVELS OF CATEGORICAL VARIABLES
 for i in string_variables:
   print(i)
   print(len(df.select(i).distinct().rdd.map(lambda r: r[0]).collect()))
