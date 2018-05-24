@@ -469,6 +469,7 @@ df.index = df['id']
 list(df.select_dtypes(['category']))
 
 # number of levels of categorical variables
+df.select_dtypes(['object']).apply(lambda x: len(set(x)))
 df.select_dtypes(['category']).apply(lambda x: len(set(x)))
 df.select_dtypes(['object']).apply(lambda x: len(set(x)))
 df.select_dtypes(['bool']).apply(lambda x: len(set(x)))
