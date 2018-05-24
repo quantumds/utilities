@@ -92,7 +92,7 @@ for i in string_variables:
   print()
 
 
-
+promo_only = promo_only.selectExpr("sn as sn", "IDEquipment as IDEquipment", "startdate as startdate", "EventCode as EventCode", "eventtext as eventtext", "analogval as analogval", "sampletime as samplingtime", "__index_level_0__ as __index_level_0__", "id as id")
 
 samples_only = samples_only.dropDuplicates(['idcrsampling'])
 promo.groupBy('EventText').count().show()
