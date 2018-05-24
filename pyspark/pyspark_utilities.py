@@ -81,6 +81,15 @@ type_your_markdown_lines
 # EDIT MARKDOWN CELL
 [Do double-click inside the cell]
 
+# SELECT ONLY STRING VARIABLES
+string_variables = [item[0] for item in df.dtypes if item[1].startswith('string')]
+
+# FREQUENCY TABLE OF DATA FRAME
+for i in string_variables:
+  print(i)
+  print(len(df.select(i).distinct().rdd.map(lambda r: r[0]).collect()))
+  print('-------------------------------------------')
+  print()
 
 
 
