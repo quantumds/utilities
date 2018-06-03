@@ -91,6 +91,11 @@ for i in string_variables:
   print('-------------------------------------------')
   print()
 
+how to delete one column in pyspark
+df.drop i believe
+
+select al columns except one
+it is a 2 liner code
 
 promo_only = promo_only.selectExpr("sn as sn", "IDEquipment as IDEquipment", "startdate as startdate", "EventCode as EventCode", "eventtext as eventtext", "analogval as analogval", "sampletime as samplingtime", "__index_level_0__ as __index_level_0__", "id as id")
 
