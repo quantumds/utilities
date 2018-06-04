@@ -19,6 +19,38 @@ x = list(completeness_plms.index)
 y = completeness_plms
 df_completeness_plms = 
 
+# DROP SEVERAL COLUMNS / DELETE SEVERAL COLUMNS
+non_predictive = ["NUM_EXPE_VALO",
+                  "ID_SOLICITUD_VALO_COMPRO",
+                  "DATA_COMUNIC_SOLI",
+                  "MOTIU_SOLICITUD",
+                  "MODEL_VALO",
+                  "OFICINA_COMPETENTE_BE",
+                  "PROCEDENCIA_SOL",
+                  "REF_CATASTRAL_COMPRO",
+                  "ID_AUTOLIQUIDACIO_COMPRO",
+                  "COD_INTERNO_BE_CATASTRAL",
+                  "DATA_ALTA_REG"]
+data = data.drop(non_predictive, 1) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Frame(dict(x=x, y=y))
 df_completeness_plms.columns = ['variable', 'complete_metric']
@@ -240,19 +272,7 @@ df.duplicated(keep = 'first').value_counts()
 # Number of appearances of each registry
 df.groupby(df.columns.tolist(),as_index=False).size()
 
-# drop several columns 
-non_predictive = ["NUM_EXPE_VALO",
-                  "ID_SOLICITUD_VALO_COMPRO",
-                  "DATA_COMUNIC_SOLI",
-                  "MOTIU_SOLICITUD",
-                  "MODEL_VALO",
-                  "OFICINA_COMPETENTE_BE",
-                  "PROCEDENCIA_SOL",
-                  "REF_CATASTRAL_COMPRO",
-                  "ID_AUTOLIQUIDACIO_COMPRO",
-                  "COD_INTERNO_BE_CATASTRAL",
-                  "DATA_ALTA_REG"]
-data = data.drop(non_predictive, 1) 
+
 
 df.dtypes
 
