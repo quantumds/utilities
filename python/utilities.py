@@ -40,8 +40,9 @@ df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-
 # Import parquet files:
 df = pd.read_parquet(file_dir + file_name_perf, engine='pyarrow')
 
-
-
+# MERGE / JOIN DATA FRAMES
+df = pd.merge(df1, df2, on = ['variable_1', 'variable_2'], how = 'inner')
+# how can be changed to 'outer', 'left' or right
 
 
 
