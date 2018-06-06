@@ -44,7 +44,9 @@ df = pd.read_parquet(file_dir + file_name_perf, engine='pyarrow')
 df = pd.merge(df1, df2, on = ['variable_1', 'variable_2'], how = 'inner')
 # how can be changed to 'outer', 'left' or right
 
-
+# DATA TYPE CONVERSION
+# Convert all columns to numeric type:
+df = df.apply(pd.to_numeric, errors='coerce')
 
 
 
