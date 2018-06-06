@@ -33,6 +33,20 @@ non_predictive = ["NUM_EXPE_VALO",
                   "DATA_ALTA_REG"]
 data = data.drop(non_predictive, 1) 
 
+# READ DATA / IMPORT DATA / READ CSV FILES / IMPORT CSV
+# Import CSV:
+df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-1', low_memory = False)
+# use dtypes argument when all rows are consistent in type: i.e. dtype={'user_id': int}
+# Import parquet files:
+df = pd.read_parquet(file_dir + file_name_perf, engine='pyarrow')
+
+
+
+
+
+
+
+
 
 
 
@@ -478,9 +492,13 @@ plt.title("Good results in DQSS 'Completeness' metric") # Assign title of the gr
 os.getcwd()
 # Change directory:
 os.chdir(route_of_new_directory)
-# Import data:
-df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-1', low_memory = False)
-# use dtypes argument when all rows are consistent in type: i.e. dtype={'user_id': int}
+
+
+
+
+
+
+
 # See names of columns
 list(df)
 # Assign names to rows index
