@@ -48,7 +48,13 @@ df = pd.merge(df1, df2, on = ['variable_1', 'variable_2'], how = 'inner')
 # Convert all columns to numeric type:
 df = df.apply(pd.to_numeric, errors='coerce')
 
-
+# MISSINGS
+# Count number of missings for a column:
+df['hardship_amount'].isnull().sum()
+# Show number of missings for each column:
+df.isnull().sum()
+# Show number of missings in percentage:
+df.isnull().sum()/len(df)*100
 
 
 
@@ -125,12 +131,7 @@ for col in ['parks', 'playgrounds', 'sports', 'roading']:
     
 # Frequency table for any variable    
 df['hardship_amount'].value_counts(dropna=False) #It drops Na autmatically
-# count number of missings for a column
-df['hardship_amount'].isnull().sum()
-# show number of missings for each column
-df.isnull().sum()
-# show number of missings in percentage
-df.isnull().sum()/len(df)*100
+
 # check what or which registries are equal to a value
 df.loc[df['hardship_amount'] == '536.81']
 
