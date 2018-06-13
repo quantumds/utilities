@@ -91,13 +91,19 @@ for i in string_variables:
   print('-------------------------------------------')
   print()
 
+# SELECT COLUMNS IN PYSPARK / SELECT VARIABLES / SELECT DATA
+name_of_df = df.selectExpr("var1 as alias1", "var2 as alias2", "var3 as alias3", "var4 as alias4", ... , "varn as aliasn" )
+
+  
+  
+  
+  
 how to delete one column in pyspark
 df.drop i believe
 
 select al columns except one
 it is a 2 liner code
 
-promo_only = promo_only.selectExpr("sn as sn", "IDEquipment as IDEquipment", "startdate as startdate", "EventCode as EventCode", "eventtext as eventtext", "analogval as analogval", "sampletime as samplingtime", "__index_level_0__ as __index_level_0__", "id as id")
 
 samples_only = samples_only.dropDuplicates(['idcrsampling'])
 promo.groupBy('EventText').count().show()
