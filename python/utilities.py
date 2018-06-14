@@ -59,31 +59,23 @@ df.isnull().sum()/len(df)*100
 # DICTIONARIES
 # Create an initial dictionary with specific size:
 d = {}
-for i in xrange(4000000):
+for i in range(4000000):
     d[i] = None
-# 722ms
-d = dict(itertools.izip(xrange(4000000), itertools.repeat(None)))
-# 634ms
-dict.fromkeys(xrange(4000000))
-# 558ms
-s = set(xrange(4000000))
-dict.fromkeys(s)
-# Chang name of a key inside dictionary:
+# Change name of a key inside dictionary:
 dict[name_of_new_key] = dict.pop(name_of_old_key)
-
 # Print elements of a dictionary
 list(name_of_dict)
 name_of_dict.keys()
 list(name_of_dict.keys())
-
 # Access elments of the dictionary:
 list(name_of_dict)[position_wanted]
 
-
-
-
-
-
+# LISTS
+# Append a list in a for loop:
+a=[]
+for i in range(5):    
+    a.append(i)
+a # the list with the new items.
 
 
 
