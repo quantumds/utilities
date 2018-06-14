@@ -68,6 +68,8 @@ dict.fromkeys(xrange(4000000))
 # 558ms
 s = set(xrange(4000000))
 dict.fromkeys(s)
+# Chang name of a key inside dictionary:
+dict[name_of_new_key] = dict.pop(name_of_old_key)
 
 # Print elements of a dictionary
 list(name_of_dict)
