@@ -56,6 +56,27 @@ df.isnull().sum()
 # Show number of missings in percentage:
 df.isnull().sum()/len(df)*100
 
+# DICTIONARIES
+# Create an initial dictionary with specific size:
+d = {}
+for i in xrange(4000000):
+    d[i] = None
+# 722ms
+d = dict(itertools.izip(xrange(4000000), itertools.repeat(None)))
+# 634ms
+dict.fromkeys(xrange(4000000))
+# 558ms
+s = set(xrange(4000000))
+dict.fromkeys(s)
+
+# Print elements of a dictionary
+list(name_of_dict)
+name_of_dict.keys()
+list(name_of_dict.keys())
+
+# Access elments of the dictionary:
+list(name_of_dict)[position_wanted]
+
 
 
 
