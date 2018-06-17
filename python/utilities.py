@@ -81,8 +81,8 @@ a # the list with the new items.
 # Index numeric, column by name:
 df.loc[df.index[number_desired_of_index], 'name_of_column']
 
-
-
+# CREATE NEW COLUMN / ADD NEW COLUMN / ADD NEW FEATURE / ADD NEW VARIABLE
+df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
 
 
 
