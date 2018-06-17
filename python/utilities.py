@@ -77,7 +77,9 @@ for i in range(5):
     a.append(i)
 a # the list with the new items.
 
-
+# FILTER DATA / FILTER A DATASET / FILTER DATAFRAME
+# Index numeric, column by name:
+df.loc[df.index[number_desired_of_index], 'name_of_column']
 
 
 
