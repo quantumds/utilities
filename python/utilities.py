@@ -77,9 +77,11 @@ for i in range(5):
     a.append(i)
 a # the list with the new items.
 
-# FILTER DATA / FILTER A DATASET / FILTER DATAFRAME
+# SELECT / FILTER DATA / FILTER A DATASET / FILTER DATAFRAME
 # Index numeric, column by name:
 df.loc[df.index[number_desired_of_index], 'name_of_column']
+# Select all dataframe except for one column
+df.loc[:, df.columns != 'name_of_column_to_exclude']
 
 # CREATE NEW COLUMN / ADD NEW COLUMN / ADD NEW FEATURE / ADD NEW VARIABLE
 df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
