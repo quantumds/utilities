@@ -90,6 +90,8 @@ df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
 cv_rf_ht.to_pickle('rf_ht.pickle')  # where to save it, usually as a .pkl
 objeto = pd.read_pickle('rf_ht.pickle')
 
+# CROSS VALIDATION / TRAIN - TEST SPLITTING / DIVIDE DATASET / SELECT TRAIN AND TEST
+train, test = train_test_split(df, test_size = perecntage_of_test_subset_in_decimal)
 
 
 
