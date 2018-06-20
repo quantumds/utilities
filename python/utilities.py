@@ -86,6 +86,9 @@ df.loc[:, df.columns != 'name_of_column_to_exclude']
 # CREATE NEW COLUMN / ADD NEW COLUMN / ADD NEW FEATURE / ADD NEW VARIABLE
 df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
 
+# SAVE A PICKLE FILE / PYTHON´s .RDATA
+cv_rf_ht.to_pickle('rf_ht.pickle')  # where to save it, usually as a .pkl
+objeto = pd.read_pickle('rf_ht.pickle')
 
 
 
