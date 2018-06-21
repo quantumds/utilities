@@ -77,11 +77,13 @@ for i in range(5):
     a.append(i)
 a # the list with the new items.
 
-# SELECT / FILTER DATA / FILTER A DATASET / FILTER DATAFRAME
+# SELECT / FILTER DATA / FILTER A DATASET / FILTER DATAFRAME / EXCLUDE / NOT SELECT
 # Index numeric, column by name:
 df.loc[df.index[number_desired_of_index], 'name_of_column']
 # Select all dataframe except for one column
 df.loc[:, df.columns != 'name_of_column_to_exclude']
+# Obtain all values not included in a list of values: list_with_values_of_variable_to_filter
+dfx = df[~df['name_of_variable'].isin(list_with_values_of_variable_to_filter)] 
 
 # CREATE NEW COLUMN / ADD NEW COLUMN / ADD NEW FEATURE / ADD NEW VARIABLE
 df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
@@ -92,6 +94,33 @@ objeto = pd.read_pickle('rf_ht.pickle')
 
 # CROSS VALIDATION / TRAIN - TEST SPLITTING / DIVIDE DATASET / SELECT TRAIN AND TEST
 train, test = train_test_split(df, test_size = perecntage_of_test_subset_in_decimal)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
