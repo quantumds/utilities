@@ -1,3 +1,9 @@
+# INSTALL PACKAGES IN ANACONDA:
+# Standard way:
+conda install name_of_package
+# If not available from current channel:
+conda install -c conda-forge name_of_package
+
 # CREATION OF A MOCK DATAFRAME
 # Option 1: 
 x = [1,1000,1001]
