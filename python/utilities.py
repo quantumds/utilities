@@ -101,9 +101,21 @@ objeto = pd.read_pickle('rf_ht.pickle')
 # CROSS VALIDATION / TRAIN - TEST SPLITTING / DIVIDE DATASET / SELECT TRAIN AND TEST
 train, test = train_test_split(df, test_size = perecntage_of_test_subset_in_decimal)
 
+# NUMPY ARRAY CONVERSION TO DATA FRAME
+new_df = pd.DataFrame(data = name_of_numpy_array[0: , 0:],    # all the matrix are the values of the new dataframe
+                      index = range(0,len(name_of_numpy_array)),    # index goes from 0 until the end of the dataframe
+                      columns = [('V' + '_' + str(i)) for i in range(0,(name_of_numpy_array.shape[1]))])  # columns are generic as V_1, V_2, ... V_n
 
+# CBIND IN PANDAS / COMBINE COLUMNS / PASTE COLUMNS
+united_df = pd.concat([first_df, second_df], axis=1)
+united_df.reset_index(drop = True, inplace = True)
 
+# RBIND IN PANDAS / COMBINE ROWS / PASTE ROWS
+united_df = pd.concat([first_df, second_df], axis=o)
+united_df.reset_index(drop = True, inplace = True)
 
+# RESET INDEX OF DATAFRAME
+df.reset_index(drop = True, inplace = True)
 
 
 
