@@ -107,6 +107,8 @@ new_df = pd.DataFrame(data = name_of_numpy_array[0: , 0:],    # all the matrix a
                       columns = [('V' + '_' + str(i)) for i in range(0,(name_of_numpy_array.shape[1]))])  # columns are generic as V_1, V_2, ... V_n
 
 # CBIND IN PANDAS / COMBINE COLUMNS / PASTE COLUMNS
+first_df.reset_index(drop = True, inplace = True)
+second_df.reset_index(drop = True, inplace = True)
 united_df = pd.concat([first_df, second_df], axis=1)
 united_df.reset_index(drop = True, inplace = True)
 
