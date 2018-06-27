@@ -59,7 +59,7 @@ df = df.apply(pd.to_numeric, errors='coerce')
 df['hardship_amount'].isnull().sum()
 # Show number of missings for each column:
 df.isnull().sum()
-# Show number of missings in percentage:
+# Show number of missings per column in percentage:
 df.isnull().sum()/len(df)*100
 
 # DICTIONARIES
