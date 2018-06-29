@@ -122,9 +122,11 @@ united_df.reset_index(drop = True, inplace = True)
 df.reset_index(drop = True, inplace = True)
 
 # COLUMN NAMES REPLACE STRINGS / 
-# To remove white space everywhere:
+# Change points in column names for underscore (_):
+df.columns=df.columns.str.replace('.','_')
+# To remove white spaces everywhere for nothing:
 df.columns = df.columns.str.replace(' ', '')
-# To replace white space everywhere
+# To replace white space everywhere for underscore (_):
 df.columns = df.columns.str.replace(' ', '_')
 # To remove white space at the beginning of string:
 df.columns = df.columns.str.lstrip()
