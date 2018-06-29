@@ -141,7 +141,9 @@ df.columns = df.columns.str.replace(' +$', '_')
 # To replace white space at both ends:
 df.columns = df.columns.str.replace('^ +| +$', '_')
 
-
+# DATE / DATETIME
+# Convert object to datetime/date type:
+df['name_of_column'] =  pd.to_datetime(df['name_of_column'], format='%d%b%Y:%H:%M:%S.%f')
 
 
 
