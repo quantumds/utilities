@@ -121,7 +121,23 @@ united_df.reset_index(drop = True, inplace = True)
 # RESET INDEX OF DATAFRAME
 df.reset_index(drop = True, inplace = True)
 
-
+# COLUMN NAMES REPLACE STRINGS / 
+# To remove white space everywhere:
+df.columns = df.columns.str.replace(' ', '')
+# To replace white space everywhere
+df.columns = df.columns.str.replace(' ', '_')
+# To remove white space at the beginning of string:
+df.columns = df.columns.str.lstrip()
+# To remove white space at the end of string:
+df.columns = df.columns.str.rstrip()
+# To remove white space at both ends:
+df.columns = df.columns.str.strip()
+# To replace white space at the beginning:
+df.columns = df.columns.str.replace('^ +', '_')
+# To replace white space at the end:
+df.columns = df.columns.str.replace(' +$', '_')
+# To replace white space at both ends:
+df.columns = df.columns.str.replace('^ +| +$', '_')
 
 
 
