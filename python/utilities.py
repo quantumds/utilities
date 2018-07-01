@@ -95,8 +95,16 @@ dfx = df[~df['name_of_variable'].isin(list_with_values_of_variable_to_filter)]
 df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
 
 # SAVE A PICKLE FILE / PYTHON´s .RDATA
-cv_rf_ht.to_pickle('rf_ht.pickle')  # where to save it, usually as a .pkl
-objeto = pd.read_pickle('rf_ht.pickle')
+# Save a model:
+import pickle
+pickle.dump(name_of_object_to_save, open('route/desired_name_of_file.pickle', 'wb'))
+# Load model:
+loaded_model = pickle.load(open('route/desired_name_of_file.pickle', 'rb'))
+result = loaded_model.score(X_test, Y_test) *# for example, to obtain predictions
+print(result)
+# Method useful only for pandas dataframes:
+df.to_pickle('name_of_file_saved.pickle')  # where to save it, usually as a .pkl
+object_saved = pd.read_pickle('name_of_file_saved.pickle')
 
 # CROSS VALIDATION / TRAIN - TEST SPLITTING / DIVIDE DATASET / SELECT TRAIN AND TEST
 train, test = train_test_split(df, test_size = perecntage_of_test_subset_in_decimal)
