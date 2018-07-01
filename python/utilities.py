@@ -123,7 +123,7 @@ united_df.reset_index(drop = True, inplace = True)
 # RBIND IN PANDAS / COMBINE ROWS / PASTE ROWS
 first_df.reset_index(drop = True, inplace = True)
 second_df.reset_index(drop = True, inplace = True)
-united_df = pd.concat([first_df, second_df], axis=o)
+united_df = pd.concat([first_df, second_df], axis=0)
 united_df.reset_index(drop = True, inplace = True)
 
 # RESET INDEX OF DATAFRAME
