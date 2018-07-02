@@ -129,7 +129,7 @@ united_df.reset_index(drop = True, inplace = True)
 # RESET INDEX OF DATAFRAME
 df.reset_index(drop = True, inplace = True)
 
-# COLUMN NAMES REPLACE STRINGS / 
+# COLUMN NAMES REPLACE STRINGS / SUBSTITUTE VALUES IN COLUMN NAMES / COLNAMES
 # Change points in column names for underscore (_):
 df.columns=df.columns.str.replace('.','_')
 # To remove white spaces everywhere for nothing:
