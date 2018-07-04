@@ -55,6 +55,8 @@ df = pd.merge(df1, df2, on = ['variable_1', 'variable_2'], how = 'inner')
 df = df.apply(pd.to_numeric, errors='coerce')
 
 # MISSINGS / DATA QUALITY ASSESSMENT
+# Total number of missings in entire dataset
+df.isnull().sum()
 # Count number of missings for a column:
 df['hardship_amount'].isnull().sum()
 # Show number of missings for each column:
