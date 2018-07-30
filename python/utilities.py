@@ -53,6 +53,11 @@ df = pd.merge(df1, df2, on = ['variable_1', 'variable_2'], how = 'inner')
 # DATA TYPE CONVERSION
 # Convert all columns to numeric type:
 df = df.apply(pd.to_numeric, errors='coerce')
+# Data Type Conversions:
+# -> string:
+plms[to_str] = plms[to_str].astype(str)
+# -> category:
+plms[to_cat] = plms[to_cat].apply(lambda x: x.astype('category'))
 
 # MISSINGS / DATA QUALITY ASSESSMENT
 # Eliminate missings from ntire dataframe:
