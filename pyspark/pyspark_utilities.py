@@ -94,12 +94,10 @@ for i in string_variables:
 # SELECT COLUMNS IN PYSPARK / SELECT VARIABLES / SELECT DATA
 name_of_df = df.selectExpr("var1 as alias1", "var2 as alias2", "var3 as alias3", "var4 as alias4", ... , "varn as aliasn" )
 
-  
-  
-  
-  
-how to delete one column in pyspark
-df.drop i believe
+# DROP A COLUMN IN SPARK / ERASE A COLUMN  
+df.drop('name_of_column').collect()
+
+
 
 select al columns except one
 it is a 2 liner code
