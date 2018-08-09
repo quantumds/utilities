@@ -103,6 +103,9 @@ dfx = df[~df['name_of_variable'].isin(list_with_values_of_variable_to_filter)]
 # CREATE NEW COLUMN / ADD NEW COLUMN / ADD NEW FEATURE / ADD NEW VARIABLE
 df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
 
+# RENAME A SINGLE COLUMN / RE-NAME A COLUMN
+df.rename(columns={'column_name_to_change':'new_column_name'}, inplace=True)
+
 # SAVE A PICKLE FILE / PYTHON´s .RDATA
 # Save a model:
 import pickle
