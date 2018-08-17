@@ -11,3 +11,15 @@ docker stop name_of_container
 
 # RE-START A DOCKER CONTAINER:
 docker restart name_of_container
+
+docker inspect -f '{{ .Mounts }}' 6501bbd2178e
+
+docker stop hopeful_keller
+
+docker restart hopeful_keller
+
+docker cp /host_dir mycontainer:/container_dir
+
+host_dir era: /Users/amsistac/Documents/ANIBAL/data_science/scala_projects/formation/1_spark_for_data_analysis_in_scala
+container_dir era: /1_spark_for_data_analysis_in_scala
+
