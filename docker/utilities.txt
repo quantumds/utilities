@@ -1,0 +1,13 @@
+# MOUNT A LOCAL DOCKER:
+ docker run -p 9001:9001 -v name_of_route/final_subdirectory:/final_subdirectory andypetrella/spark-notebook:0.7.0-scala-2.11.8-spark-2.1.1-hadoop-2.6.0-cdh5.4.2-with-hive
+# Example of mounting Local Docker: 
+ docker run -p 9001:9001 -v /Users/amsistac/Documents/ANIBAL/data_science/scala_projects/formation/1_spark_for_data_analysis_in_scala:/1_spark_for_data_analysis_in_scala andypetrella/spark-notebook:0.7.0-scala-2.11.8-spark-2.1.1-hadoop-2.6.0-cdh5.4.2-with-hive
+ 
+# WATCHING CURRENT DOCKER CONTAINERS IN TERMINAL:
+docker ps
+
+# STOP A CURRENT CONTAINER:
+docker stop name_of_container
+
+# RE-START A DOCKER CONTAINER:
+docker restart name_of_container
