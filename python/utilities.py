@@ -98,7 +98,8 @@ df.loc[df.index[number_desired_of_index], 'name_of_column']
 # Select all dataframe except for one column
 df.loc[:, df.columns != 'name_of_column_to_exclude']
 # Obtain all values not included in a list of values: list_with_values_of_variable_to_filter
-dfx = df[~df['name_of_variable'].isin(list_with_values_of_variable_to_filter)] 
+dfx = df[~df['name_of_variable'].isin(list_with_values_of_variable_to_filter)] # You obtain the registries of the dataframe that do not have the values of the list in the specified variable
+dfx = df[df['name_of_variable'].isin(list_with_values_of_variable_to_filter)] # You obtain the registries of the dataframe that DO have the values of the list in the specified variable
 
 # CREATE NEW COLUMN / ADD NEW COLUMN / ADD NEW FEATURE / ADD NEW VARIABLE
 df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
