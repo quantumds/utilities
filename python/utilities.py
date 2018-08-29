@@ -172,6 +172,18 @@ df.name_of_column = df.name_of_column.str.slice(0, 9) # Select characters from 0
 df['name_of_column'] = df['name_of_column'].str.slice(0, 9) # Select characters from 0 to 8 (9-1)
 df.name_of_column = df.name_of_column.str[:9]
 
+# PLOT
+import matplotlib.pyplot as plt
+f, ax = plt.subplots(figsize=(35, 28)) # Set size of the graph
+plt.rcParams.update({'font.size': 22})
+plt.hist(pd.to_numeric(tpa3cf_final['distance']), bins='auto')  # arguments are passed to np.histogram
+ax.tick_params(direction='out', length=6, width=2, colors='black',grid_color='r', grid_alpha=0.5) # change size of axis with pyplot from matplotlib NOT seaborn
+plt.title("Defects distribution for TP A3 CP")
+plt.xlabel("Distance Days") # Assign name of the x label
+plt.ylabel("Frequency") # Assign name of the y label
+plt.title("Distribution of Defects based on Days Distance to the Event") # Assign title of the graph
+plt.show()
+
 
 
 
