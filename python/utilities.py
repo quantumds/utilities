@@ -184,7 +184,8 @@ plt.ylabel("Frequency") # Assign name of the y label
 plt.title("Distribution of Defects based on Days Distance to the Event") # Assign title of the graph
 plt.show()
 
-
+# RESET INDEX OF A DATAFRAME
+df.reset_index(drop = True, inplace = True)
 
 
 
