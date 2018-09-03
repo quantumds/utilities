@@ -1,1 +1,8 @@
-
+# CREATE A TABLE COPY FROM ANOTHER ONE
+SELECT *
+    INTO db.new_table
+  FROM db.old_table
+  
+# ADD A COLUMN TO A TABLE
+ALTER TABLE table_name
+  ADD column_name column_TYPE;
