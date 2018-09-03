@@ -1,1 +1,35 @@
+# CLONE A REPOSITORY:
+git clone route_of_git_with_the_repo
 
+# COMMIT CHANGES:
+git commit -am “comment_that_explains_this_commit”
+git push origin name_of_branch_where_you_are_doing_your_changes
+
+# WATCH HOW MANY BRANCHES ARE IN THE REPO:
+git branch –r
+
+# CREATE A NEW BRANCH:
+git checkout -b name_of_the_new_branch
+git push origin name_of_the_new_branch
+
+# CREATE AN EMPTY FILE:
+touch name_of_the_file.txt
+
+# CREATE AN EMPTY FOLDER:
+mkdir name_of_the_new_folder
+
+# MOVE FILE FROM PLACE TO DIRECTORY:
+mv file.txt doc
+
+# BEFORE DOING A COMMIT WITH SUBFOLDERS
+git add name_of_folder_/name_of_folder/name_of_file.termination
+
+# OTHER TIPS FOR COMMITING ADDING FOLDERS AND FILES:
+git add . # (This will add all files of the current directory to track (including untracked).
+git add -A # One liner that does the same thing is:
+
+# KNOW IN WHICH BRANCH YOU ARE:
+git status
+
+# CHANGE BRANCH
+git checkout name_of_new_branch
