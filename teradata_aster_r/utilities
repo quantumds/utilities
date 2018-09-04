@@ -1,0 +1,6 @@
+# CONNECT TO TERADATA ASTER R
+library(TeradataAsterR)
+ta.connect("AsterDSN")
+
+# RETRIEVE ALL TABLES IN THE DATABASE
+ta.dbObjects.ls() # Retrieve all tables
