@@ -12,3 +12,16 @@ val spark = SparkSession.builder().getOrCreate() # Create the Spark variable
 val df_with_header = spark.read.option("header", true).csv(route_of_file_with_termination)
 # Real life example
 val df_2 = spark.read.option("header", true).csv("/1_spark_for_data_analysis_in_scala/train.csv")
+
+# OBTAIN WORKING DIRECTORY:
+System.getProperty("user.dir")
+
+# TYPES OF A DATAFRAME
+df_2.dtypes
+
+# READING A CSV FILE WITH HEADER AND inferSchema
+val spark = SparkSession.builder().getOrCreate() # Create the Spark variable
+val df_with_header = spark.read.option("header", true).csv(route_of_file_with_termination)
+val df_with_header_and_inferring_schema = spark.read.option("header", true).option("inferSchema", true).csv(route_of_file_with_termination)
+# Real life example
+val df_3 = spark.read.option("header", true).option("inferSchema", true).csv("/1_spark_for_data_analysis_in_scala/train.csv")
