@@ -28,3 +28,6 @@ val df_3 = spark.read.option("header", true).option("inferSchema", true).csv("/1
 
 # SELECT
 df.select("column_1", "column_2")
+
+# FILTER
+df.filter(df("column_to_filter") > reference_value).select("column_1", "column_2")
