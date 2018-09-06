@@ -24,3 +24,10 @@ docker inspect -f '{{ .Mounts }}' 6501bbd2178e
 
 # ADD CONTENTS OF A FOLDER TO THE CONTAINER (I do not remeber well this order):
 docker cp /host_dir mycontainer:/container_dir
+
+# EXAMPLE OF HOW BEGINNING SPARK NOTEBOOK WITH SCALA FROM SCRATCH:
+1) docker ps
+2) docker restart hopeful_keller
+3) docker ps (Check that the container appears in the 'docker ps')
+4) Copy the port URL from terminal and paste it in Google Chrome: 0.0.0.0:9001
+5) After ending the session type: docker stop hopeful_keller
