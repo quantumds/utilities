@@ -25,3 +25,6 @@ val df_with_header = spark.read.option("header", true).csv(route_of_file_with_te
 val df_with_header_and_inferring_schema = spark.read.option("header", true).option("inferSchema", true).csv(route_of_file_with_termination)
 # Real life example
 val df_3 = spark.read.option("header", true).option("inferSchema", true).csv("/1_spark_for_data_analysis_in_scala/train.csv")
+
+# SELECT
+df.select("column_1", "column_2")
