@@ -2,24 +2,25 @@
  docker run -p 9001:9001 -v name_of_route/final_subdirectory:/final_subdirectory andypetrella/spark-notebook:0.7.0-scala-2.11.8-spark-2.1.1-hadoop-2.6.0-cdh5.4.2-with-hive
 # Example of mounting Local Docker: 
  docker run -p 9001:9001 -v /Users/amsistac/Documents/ANIBAL/data_science/scala_projects/formation/1_spark_for_data_analysis_in_scala:/1_spark_for_data_analysis_in_scala andypetrella/spark-notebook:0.7.0-scala-2.11.8-spark-2.1.1-hadoop-2.6.0-cdh5.4.2-with-hive
- 
+# In the previous case, the constants were:
+host_dir = /Users/amsistac/Documents/ANIBAL/data_science/scala_projects/formation/1_spark_for_data_analysis_in_scala
+container_dir = /1_spark_for_data_analysis_in_scala
+
 # WATCHING CURRENT DOCKER CONTAINERS IN TERMINAL:
 docker ps
 
 # STOP A CURRENT CONTAINER:
 docker stop name_of_container
+# For example, a real case:
+# docker stop hopeful_keller
 
 # RE-START A DOCKER CONTAINER:
 docker restart name_of_container
+# For example, a real case:
+# docker restart hopeful_keller
 
+# INSPECCIONAR UN CONTAINER (I do not remember well this order): 
 docker inspect -f '{{ .Mounts }}' 6501bbd2178e
 
-docker stop hopeful_keller
-
-docker restart hopeful_keller
-
+# ADD CONTENTS OF A FOLDER TO THE CONTAINER (I do not remeber well this order):
 docker cp /host_dir mycontainer:/container_dir
-
-host_dir era: /Users/amsistac/Documents/ANIBAL/data_science/scala_projects/formation/1_spark_for_data_analysis_in_scala
-container_dir era: /1_spark_for_data_analysis_in_scala
-
