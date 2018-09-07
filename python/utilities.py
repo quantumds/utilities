@@ -191,9 +191,10 @@ plt.show()
 df.reset_index(drop = True, inplace = True)
 
 # DATA TYPE CONVERSION / CHANGE DATA TYPE / CONVERT DATA TYPE
-# Convert type to string
+# Convert type to string:
 df['id']= df['id'].astype('str')
-
+# Convert object variables to category:
+df[df.select_dtypes(['object']).columns] = df.select_dtypes(['object']).apply(lambda x: x.astype('category'))
 
 
 
