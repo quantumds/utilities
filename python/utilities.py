@@ -190,6 +190,9 @@ plt.show()
 # RESET INDEX OF A DATAFRAME
 df.reset_index(drop = True, inplace = True)
 
+# DATA TYPE CONVERSION / CHANGE DATA TYPE / CONVERT DATA TYPE
+# Convert type to string
+df['id']= df['id'].astype('str')
 
 
 
