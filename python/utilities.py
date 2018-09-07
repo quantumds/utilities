@@ -108,7 +108,7 @@ unified['col-2'].isin(eventcodesprod) #Condition: 'take registries where 'col-2'
 # CREATE NEW COLUMN / ADD NEW COLUMN / ADD NEW FEATURE / ADD NEW VARIABLE
 df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
 
-# RENAME A SINGLE COLUMN / RE-NAME A COLUMN
+# RENAME A SINGLE COLUMN / RE-NAME A COLUMN / CHANGE NAME OF A COLUMN
 df.rename(columns={'column_name_to_change':'new_column_name'}, inplace=True)
 
 # SAVE A PICKLE FILE / PYTHON´s .RDATA
