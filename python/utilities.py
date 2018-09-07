@@ -42,6 +42,9 @@ data = data.drop(non_predictive, 1)
 # READ DATA / IMPORT DATA / READ CSV FILES / IMPORT CSV
 # Import CSV:
 df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-1', low_memory = False)
+# Other parameters:
+# error_bad_lines=False
+# quoting = 3 # quote = ""
 # use dtypes argument when all rows are consistent in type: i.e. dtype={'user_id': int}
 # Import parquet files:
 df = pd.read_parquet(file_dir + file_name_perf, engine='pyarrow')
