@@ -53,14 +53,16 @@ df = pd.read_parquet(file_dir + file_name_perf, engine='pyarrow')
 df = pd.merge(df1, df2, on = ['variable_1', 'variable_2'], how = 'inner')
 # how can be changed to 'outer', 'left' or right
 
-# DATA TYPE CONVERSION
+# DATA TYPE CONVERSION / CHANGE DATA TYPE / CONVERT DATA TYPE
 # Convert all columns to numeric type:
 df = df.apply(pd.to_numeric, errors='coerce')
 # Data Type Conversions:
 # -> string:
 plms[to_str] = plms[to_str].astype(str)
+df['id']= df['id'].astype('str')
 # -> category:
 plms[to_cat] = plms[to_cat].apply(lambda x: x.astype('category'))
+df[df.select_dtypes(['object']).columns] = df.select_dtypes(['object']).apply(lambda x: x.astype('category'))
 
 # MISSINGS / DATA QUALITY ASSESSMENT
 # Eliminate missings from ntire dataframe:
@@ -190,11 +192,6 @@ plt.show()
 # RESET INDEX OF A DATAFRAME
 df.reset_index(drop = True, inplace = True)
 
-# DATA TYPE CONVERSION / CHANGE DATA TYPE / CONVERT DATA TYPE
-# Convert type to string:
-df['id']= df['id'].astype('str')
-# Convert object variables to category:
-df[df.select_dtypes(['object']).columns] = df.select_dtypes(['object']).apply(lambda x: x.astype('category'))
 
 
 
