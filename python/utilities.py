@@ -4,6 +4,10 @@ conda install name_of_package
 # If not available from current channel:
 conda install -c conda-forge name_of_package
 
+# SET GLOBAL WARNINGS IN PYTHON OFF
+import warnings
+warnings.filterwarnings('ignore')
+
 # CREATION OF A MOCK DATAFRAME
 # Option 1: 
 x = [1,1000,1001]
