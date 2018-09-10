@@ -202,6 +202,37 @@ plt.show()
 # RESET INDEX OF A DATAFRAME
 df.reset_index(drop = True, inplace = True)
 
+# APPLY / LAMBDA FUNCTION 
+df[columns_to_apply_lambda] = df[columns_to_apply_lambda].apply(lambda x: function(x))
+# Example:
+plms[to_cat] = plms[to_cat].apply(lambda x: x.astype('category'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
