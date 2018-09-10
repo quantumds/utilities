@@ -203,7 +203,9 @@ plt.show()
 df.reset_index(drop = True, inplace = True)
 
 # APPLY / LAMBDA FUNCTION 
-df[columns_to_apply_lambda] = df[columns_to_apply_lambda].apply(lambda x: function(x))
+df[columns_to_apply_lambda] = df[columns_to_apply_lambda].apply(lambda x: write_function_as_it_was_our_variable_and_then_change_the_column_by_x)
+# Where x in our mind would be where we put the column.
+# The trick is to write the function as it was with our variable, and then changing the column by 'x'
 # Example:
 plms[to_cat] = plms[to_cat].apply(lambda x: x.astype('category'))
 
