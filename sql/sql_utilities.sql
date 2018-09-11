@@ -40,12 +40,17 @@ WHERE column3 BETWEEN value_of_column1 AND value_of_column2;
 SELECT *
 FROM car
 WHERE brand LIKE 'F%'; -- For example, 'Ford' would be result
-
 -- _
 -- Means 'any single value' (1 number or 1 letter, this means: 1 character). The value '_' needs to be used with the operator LIKE.
 SELECT *
 FROM car
 WHERE brand LIKE 'Volk_wagen'; -- For example, 'Volkswagen'
+-- NULL / NOT NULL (Missing values)
+-- The value NULL or the value NOT NULL identifies if there are missings or there aren't missings.
+-- The value NULL or NOT NULL will always be used with the operator IS.
+SELECT *
+FROM car
+WHERE price IS NOT NULL;
 
 -- WHERE
 SELECT *
