@@ -1,5 +1,6 @@
 -- INTERESTING TOPICS
 -- Values can be referred to without quotes WHERE age > 29; or with quotes (single or double): WHERE age > '29';
+-- The good practice in SQL is that text is referred with quotes ''; and numbers without them.
 
 -- COMMENTS IN SQL
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
