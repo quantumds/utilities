@@ -18,6 +18,10 @@ FROM table;
 SELECT column_1, column_2 
 FROM table_name;
 
+/* OPERATORS */
+-- Equal to: =
+-- Different from: !=
+
 -- WHERE
 SELECT *
 FROM table_name
