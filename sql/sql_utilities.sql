@@ -3,6 +3,8 @@
 select * from tablename; /*Select all columns from a table */
 # Select one column:
 select name_of_column from table;
+# Select several columns from table:
+select column_1, column_2 from table table_name;
 
 # CREATE A TABLE COPY FROM ANOTHER ONE
 SELECT *
