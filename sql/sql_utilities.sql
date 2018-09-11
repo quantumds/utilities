@@ -1,4 +1,7 @@
 -- INTERESTING TOPICS
+-- SQL does not differentiate between uppercase and lower case, so you can use both indifferently.
+-- Every time that we use the operator '%' which means 'something' (numbers or letters) we need to use 'LIKE'.
+-- Every time that we use the operator LIKE we need to use the operator '%', which means 'something' (numbers or letters).
 -- Values can be referred to without quotes WHERE age > 29; or with quotes (single or double): WHERE age > '29';
 -- The good practice in SQL is that text is referred with quotes ''; and numbers without them.
 
