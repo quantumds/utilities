@@ -217,6 +217,9 @@ plms[to_cat] = plms[to_cat].apply(lambda x: x.astype('category'))
 # PRINT CSV TABLE / EXPORT CSV TABLE / PRINT TEXT FILES / EXPORT
 df.to_csv(directory_with_slash_at_end + name_of_file_with_extension, sep='|', index = False)
 
+# VIEW ALL COLUMNS IN A DATAFRAME DATA FRAME DATA SET / IPYTHON JUPYTER
+with pd.option_context('display.max_columns', None):
+    print(df)
 
 
 
