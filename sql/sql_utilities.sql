@@ -23,6 +23,10 @@ FROM table_name;
 -- Different from: !=
 -- Or: OR
 -- And: AND
+-- Between:
+SELECT column1, column2
+FROM table_name
+WHERE column3 BETWEEN value_of_column1 AND value_of_column2;
 
 -- WHERE
 SELECT *
