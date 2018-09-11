@@ -1,4 +1,5 @@
 -- INTERESTING TOPICS
+-- SQL will never show NULLs in its resullts of queries. You need to bear that in mind. It filters the NULLs out of the results.
 -- SQL does not differentiate between uppercase and lower case, so you can use both indifferently.
 -- Every time that we use the value '%' which means 'something' (numbers or letters) we need to use the operator 'LIKE'.
 -- Every time that we use the operator LIKE, we need to use the value '%', which means 'something' (numbers or letters).
