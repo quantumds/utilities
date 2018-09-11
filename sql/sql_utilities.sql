@@ -1,3 +1,9 @@
+# SELECT INFORMATION FROM TABLE:
+# Select all columns:
+select * from tablename; /*Select all columns from a table */
+# Select one column:
+select name_of_column from table;
+
 # CREATE A TABLE COPY FROM ANOTHER ONE
 SELECT *
     INTO db.new_table
