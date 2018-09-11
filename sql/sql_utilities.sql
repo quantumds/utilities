@@ -28,6 +28,7 @@ FROM table_name;
 -- Different from: !=
 -- Or: OR
 -- And: AND
+-- Like: LIKE (to be used with % in the value)
 -- Between:
 SELECT column1, column2
 FROM table_name
