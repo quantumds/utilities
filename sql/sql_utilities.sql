@@ -30,7 +30,10 @@ FROM table_name;
 -- Or: OR
 -- And: AND
 -- Like: LIKE (to be used with % in the value)
--- Between:
+SELECT *
+FROM CAR
+WHERE model LIKE 'F%';
+-- Between: BETWEEN
 SELECT column1, column2
 FROM table_name
 WHERE column3 BETWEEN value_of_column1 AND value_of_column2;
