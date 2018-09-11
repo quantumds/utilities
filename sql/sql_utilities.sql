@@ -1,4 +1,5 @@
-when to use quotes or not quotes in the value of WHERE;
+-- INTERESTING TOPICS
+-- Values can be referred to without quotes WHERE age > 29; or with quotes (single or double): WHERE age > '29';
 
 -- COMMENTS IN SQL
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
