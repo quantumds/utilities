@@ -214,7 +214,8 @@ df[columns_to_apply_lambda] = df[columns_to_apply_lambda].apply(lambda x: write_
 # Example:
 plms[to_cat] = plms[to_cat].apply(lambda x: x.astype('category'))
 
-
+# PRINT CSV TABLE / EXPORT CSV TABLE / PRINT TEXT FILES / EXPORT
+df.to_csv(directory_with_slash_at_end + name_of_file_with_extension, sep='|', index = False)
 
 
 
