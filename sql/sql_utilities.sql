@@ -21,6 +21,8 @@ FROM table_name;
 /* OPERATORS */
 -- Equal to: =
 -- Different from: !=
+-- Or: OR
+-- And: AND
 
 -- WHERE
 SELECT *
