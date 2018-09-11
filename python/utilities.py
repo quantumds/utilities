@@ -62,8 +62,9 @@ df = pd.merge(df1, df2, on = ['variable_1', 'variable_2'], how = 'inner')
 df = df.apply(pd.to_numeric, errors='coerce')
 # Data Type Conversions:
 # -> String:
-plms[to_str] = plms[to_str].astype(str)
 df['id']= df['id'].astype('str')
+to_string = ['col_1', 'col_2', 'col_3', ..., 'col_n']
+df[to_string] = df[to_string].apply(lambda x: x.astype(str))
 # -> Category:
 plms[to_cat] = plms[to_cat].apply(lambda x: x.astype('category'))
 df[df.select_dtypes(['object']).columns] = df.select_dtypes(['object']).apply(lambda x: x.astype('category'))
