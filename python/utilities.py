@@ -71,7 +71,9 @@ df[df.select_dtypes(['object']).columns] = df.select_dtypes(['object']).apply(la
 df['column_to_numeric'] = pd.to_numeric(df.column_to_numeric, errors = 'coerce')
 
 # MISSINGS / DATA QUALITY ASSESSMENT
-# Eliminate missings from ntire dataframe:
+# Count number of missings in entire dataframe:
+sum(tl_view.isnull().sum())
+# Eliminate missings from entire dataframe:
 df.dropna(axis=0, how='any', inplace = True) # Eliminate rows.
 # Total number of missings in entire dataset
 df.isnull().sum()
