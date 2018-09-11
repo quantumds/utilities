@@ -1,3 +1,12 @@
+when to use quotes or not quotes in the value of WHERE;
+
+-- COMMENTS IN SQL
+-- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
+-- But this methodology only works for 1 liners. After entering 'Enter. after the 2 hyphens the text is not considered 
+-- comment by SQL).
+/* Comments are also written putting the string: "/*" afterwards the comment, and then closing the comment with this string:
+*/
+
 -- SELECT INFORMATION FROM TABLE:
 -- Select all columns:
 SELECT * 
