@@ -7,8 +7,7 @@
 -- The good practice in SQL is that text is referred with quotes ''; and numbers without them.
 -- You cannot select all columns from 2 tables without 'WHERE' clause, because SQL will give you the Cartesian product.
 -- You only need to specify table_name.column_name in cases where the columns that you want so select have the same name in different tables.
--- All JOIN operations must be accompanied by ON. ALWAYS!!!
--- ORDER BY normally shows its result with ASC by default. This is in ascending way. 
+
 
 /* SQL SKETCH */
 SELECT
@@ -18,12 +17,14 @@ ON
 WHERE
 ORDER BY
 
+
 /* COMMENTS IN SQL */
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
 -- But this methodology only works for 1 liners. After entering 'Enter. after the 2 hyphens the text is not considered 
 -- comment by SQL).
 /* Comments are also written putting the string: "/*" afterwards the comment, and then closing the comment with this string:
 */
+
 
 /* SELECT */
 -- Select all columns from one table:
@@ -46,6 +47,7 @@ SELECT *
 FROM table1, table2
 WHERE table1.id1 = table2.id2;
 
+
 /* SELECT DISTINCT */
 -- Eliminates duplicates in the columns specified in the query:
 SELECT DISTINCT department
@@ -54,12 +56,18 @@ FROM employees;
 SELECT DISTINCT department, position
 FROM employees;
 
+
 /* SELECT COUNT */
-# Count number of rows / Count number of registries:
+-- Count number of rows / Count number of registries:
 SELECT
 	COUNT(*)
 FROM
 	employees; 
+-- SELECT COUNT(*) counts the rows of the table, SELECT COUNT(variable) counts the registries non NULL in that variable.
+-- Count number of different registries of/in a specific variable:	
+SELECT count(DISTINCT variable)
+FROM table_name;
+	
 	
 /* OPERATORS */
 -- Equal to: =
@@ -75,6 +83,7 @@ SELECT column1, column2
 FROM table_name
 WHERE column3 BETWEEN value_of_column1 AND value_of_column2;
 
+
 /* VALUES */ 
 -- %
 -- Means something (any collection of numbers and letters). The value '%' needs to be used with the operator LIKE.
@@ -86,28 +95,33 @@ WHERE brand LIKE 'F%'; -- For example, 'Ford' would be result
 SELECT *
 FROM car
 WHERE brand LIKE 'Volk_wagen'; -- For example, 'Volkswagen'
--- NULL / NOT NULL (Missing values)
+-- NULL / NOT NULL (Missing values) / Missings
 -- The value NULL or the value NOT NULL identifies if there are missings or there aren't missings.
 -- The value NULL or NOT NULL will always be used with the operator IS.
 SELECT *
 FROM car
 WHERE price IS NOT NULL;
 
+
 /* WHERE */
 SELECT *
 FROM table_name
 WHERE column_name = column_value;
+
 
 /* CREATE A TABLE COPY FROM ANOTHER ONE */
 SELECT *
     INTO db.new_table
   FROM db.old_table
   
+  
 /* ADD A COLUMN TO A TABLE */
 ALTER TABLE table_name
   ADD column_name column_TYPE;
 
+
 /* JOIN */
+-- All JOIN operations must be accompanied by ON. ALWAYS!!!
 -- Select all columns from an internal join:
 SELECT *
 FROM
@@ -124,6 +138,7 @@ FROM
 director JOIN movie
 WHERE director.id = movie.director_id;
 
+
 /* AS */
 -- Select column from a table and change it to 'column_other':
 SELECT 
@@ -138,12 +153,14 @@ FROM
 ON
 	director.id = movie.director_id;
 
+
 /* ORDER BY */
-# Order by 'column_fromtablename':
+-- ORDER BY normally shows its result with ASC by default. This is in ascending way. 
+-- Order by 'column_fromtablename':
 SELECT *
 FROM tablename
 ORDER BY column_fromtablename;
-# Real life example:
+-- Real life example:
 SELECT *
 FROM employees
 ORDER BY salary;
