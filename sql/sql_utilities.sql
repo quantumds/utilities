@@ -57,13 +57,13 @@ SELECT DISTINCT department, position
 FROM employees;
 
 
-/* SELECT COUNT */
+/* SELECT count */
 -- Count number of rows / Count number of registries:
 SELECT
-	COUNT(*)
+	count(*)
 FROM
 	employees; 
--- SELECT COUNT(*) counts the rows of the table, SELECT COUNT(variable) counts the registries non NULL in that variable.
+-- SELECT count(*) counts the rows of the table, SELECT COUNT(variable) counts the registries non NULL in that variable.
 -- Count number of different registries of/in a specific variable:	
 SELECT count(DISTINCT variable)
 FROM table_name;
