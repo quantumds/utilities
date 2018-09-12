@@ -56,8 +56,8 @@ FROM employees;
 SELECT DISTINCT department, position
 FROM employees;
 
-
-/* SELECT count */
+/* FUNCTIONS/*
+-- SELECT count()
 -- Count number of rows / Count number of registries:
 SELECT
 	count(*)
@@ -67,7 +67,16 @@ FROM
 -- Count number of different registries of/in a specific variable:	
 SELECT count(DISTINCT variable)
 FROM table_name;
-	
+-- SELECT max()
+# Find the maximum salary of table employees:
+SELECT
+max(salary)
+FROM employees;
+-- SELECT min()
+# Find the minimum salary of table employees:
+SELECT
+min(salary)
+FROM employees;
 	
 /* OPERATORS */
 -- Equal to: =
