@@ -209,6 +209,11 @@ plt.ylabel("Frequency") # Assign name of the y label
 plt.title("Distribution of Defects based on Days Distance to the Event") # Assign title of the graph
 plt.show()
 
+# VIEW / VIEW A TABLE / VIEW A DATA FRAME / SEE A TABLE / SEE A DATA FRAME
+# View all columns in table:
+with pd.option_context('display.max_columns', None):
+    print(df)
+
 # RESET INDEX OF A DATAFRAME
 df.reset_index(drop = True, inplace = True)
 
