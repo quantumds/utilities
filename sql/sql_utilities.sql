@@ -9,6 +9,14 @@
 -- You only need to specify table_name.column_name in cases where the columns that you want so select have the same name in different tables.
 -- All JOIN operations must be accompanied by ON. ALWAYS!!!
 
+/* SQL SKETCH */
+SELECT
+FROM
+JOIN
+ON
+WHERE
+ORDER BY
+
 /* COMMENTS IN SQL */
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
 -- But this methodology only works for 1 liners. After entering 'Enter. after the 2 hyphens the text is not considered 
