@@ -5,6 +5,7 @@
 -- Every time that we use the operator LIKE, we need to use the value '%', which means 'something' (numbers or letters).
 -- Values can be referred to without quotes WHERE age > 29; or with quotes (single or double): WHERE age > '29';
 -- The good practice in SQL is that text is referred with quotes ''; and numbers without them.
+-- You cannot select all columns from 2 tables because SQL will give you the Cartesian product.
 
 -- COMMENTS IN SQL
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
@@ -29,9 +30,6 @@ FROM table_name;
 -- Select all columns from one table:
 SELECT *
 FROM table_name;
--- Select all columns from different tables:
-SELECT *
-FROM table1, table2;
 
 /* OPERATORS */
 -- Equal to: =
