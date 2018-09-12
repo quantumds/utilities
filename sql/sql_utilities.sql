@@ -7,6 +7,7 @@
 -- The good practice in SQL is that text is referred with quotes ''; and numbers without them.
 -- You cannot select all columns from 2 tables without 'WHERE' clause, because SQL will give you the Cartesian product.
 -- You only need to specify table_name.column_name in cases where the columns that you want so select have the same name in different tables.
+-- All JOIN operations must be accompanied by ON. ALWAYS!!!
 
 /* COMMENTS IN SQL */
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
