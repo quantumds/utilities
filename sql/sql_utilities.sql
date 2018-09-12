@@ -114,7 +114,15 @@ FROM
 ON
 	director.id = movie.director_id;
 
-
+/* ORDER BY */
+# Order by 'column_fromtablename':
+SELECT *
+FROM tablename
+ORDER BY column_fromtablename;
+# Real life example:
+SELECT *
+FROM employees
+ORDER BY salary;
 
 
 
