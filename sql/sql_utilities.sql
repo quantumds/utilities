@@ -25,7 +25,7 @@ ORDER BY
 /* Comments are also written putting the string: "/*" afterwards the comment, and then closing the comment with this string:
 */
 
-/* SELECT INFORMATION FROM TABLE */
+/* SELECT */
 -- Select all columns from one table:
 SELECT * 
 FROM tablename; /*Select all columns from a table */
@@ -45,6 +45,14 @@ FROM table_name;
 SELECT *
 FROM table1, table2
 WHERE table1.id1 = table2.id2;
+
+/* SELECT DISTINCT */
+-- Eliminates duplicates in the columns specified in the query:
+SELECT DISTINCT department
+FROM employees;
+-- All unique combinations in 2 columns:
+SELECT DISTINCT department, position
+FROM employees;
 
 /* OPERATORS */
 -- Equal to: =
