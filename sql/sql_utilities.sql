@@ -14,7 +14,7 @@
 */
 
 -- SELECT INFORMATION FROM TABLE:
--- Select all columns:
+-- Select all columns from one table:
 SELECT * 
 FROM tablename; /*Select all columns from a table */
 -- Select one column:
@@ -23,6 +23,15 @@ FROM table;
 -- Select several columns from table:
 SELECT column_1, column_2 
 FROM table_name;
+-- Select several columns from table:
+SELECT column_1, column_2 
+FROM table_name;
+-- Select all columns from one table:
+SELECT *
+FROM table_name;
+-- Select all columns from different tables:
+SELECT *
+FROM table1, table2;
 
 /* OPERATORS */
 -- Equal to: =
