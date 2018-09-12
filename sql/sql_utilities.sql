@@ -99,5 +99,33 @@ FROM
 director JOIN movie
 WHERE director.id = movie.director_id;
 
+/* AS */
+-- Select column from a table and change it to 'column_other':
+SELECT 
+    column AS column_other
+FROM
+    table;
+# More difficult example. Implement AS ion a JOIN process:
+SELECT
+	name, title AS movie_title
+FROM
+	director JOIN movie
+ON
+	director.id = movie.director_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
