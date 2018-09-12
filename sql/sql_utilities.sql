@@ -80,3 +80,14 @@ SELECT *
 -- ADD A COLUMN TO A TABLE
 ALTER TABLE table_name
   ADD column_name column_TYPE;
+
+-- JOIN
+SELECT *
+FROM
+table1 JOIN table2
+ON table1.id1 = table2.id2;
+-- Real example:
+SELECT *
+FROM 
+person JOIN CAR
+ON person.id = car.owner_id;
