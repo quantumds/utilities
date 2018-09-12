@@ -142,8 +142,11 @@ SELECT
   * 
 FROM orders 
 ORDER BY salary DESC;
-
-
+-- ORDER BY several columns in ASC and DESC at the same time:
+SELECT
+  * 
+FROM order 
+ORDER BY salary ASC, age DESC;
 
 
 
