@@ -1,13 +1,14 @@
--- INTERESTING TOPICS
+/* INTERESTING TOPICS */
 -- SQL will never show NULLs in its resullts of queries. You need to bear that in mind. It filters the NULLs out of the results.
 -- SQL does not differentiate between uppercase and lower case, so you can use both indifferently.
 -- Every time that we use the value '%' which means 'something' (numbers or letters) we need to use the operator 'LIKE'.
 -- Every time that we use the operator LIKE, we need to use the value '%', which means 'something' (numbers or letters).
 -- Values can be referred to without quotes WHERE age > 29; or with quotes (single or double): WHERE age > '29';
 -- The good practice in SQL is that text is referred with quotes ''; and numbers without them.
--- You cannot select all columns from 2 tables because SQL will give you the Cartesian product.
+-- You cannot select all columns from 2 tables without 'WHERE' clause, because SQL will give you the Cartesian product.
+-- You only need to specify table_name.column_name in cases where the columns that you want so select have the same name in different tables.
 
--- COMMENTS IN SQL
+/* COMMENTS IN SQL */
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
 -- But this methodology only works for 1 liners. After entering 'Enter. after the 2 hyphens the text is not considered 
 -- comment by SQL).
