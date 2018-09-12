@@ -81,7 +81,8 @@ SELECT *
 ALTER TABLE table_name
   ADD column_name column_TYPE;
 
--- JOIN
+/* JOIN */
+-- Select all columns from an internal join:
 SELECT *
 FROM
 table1 JOIN table2
@@ -91,3 +92,11 @@ SELECT *
 FROM 
 person JOIN CAR
 ON person.id = car.owner_id;
+-- Select several columns from different tables in an internal join:
+SELECT director.name, movie.title
+FROM
+director JOIN movie
+WHERE director.id = movie.director_id;
+
+
+
