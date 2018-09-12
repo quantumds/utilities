@@ -8,6 +8,7 @@
 -- You cannot select all columns from 2 tables without 'WHERE' clause, because SQL will give you the Cartesian product.
 -- You only need to specify table_name.column_name in cases where the columns that you want so select have the same name in different tables.
 -- All JOIN operations must be accompanied by ON. ALWAYS!!!
+-- ORDER BY normally shows its result with ASC by default. This is in ascending way. 
 
 /* SQL SKETCH */
 SELECT
@@ -131,8 +132,16 @@ ORDER BY column_fromtablename;
 SELECT *
 FROM employees
 ORDER BY salary;
-
-
+-- ORDER BY with option ASC:
+SELECT
+  * 
+FROM orders 
+ORDER BY salary ASC;
+-- ORDER BY with option DESC:
+SELECT
+  * 
+FROM orders 
+ORDER BY salary DESC;
 
 
 
