@@ -54,6 +54,13 @@ FROM employees;
 SELECT DISTINCT department, position
 FROM employees;
 
+/* SELECT COUNT */
+# Count number of rows / Count number of registries:
+SELECT
+	COUNT(*)
+FROM
+	employees; 
+	
 /* OPERATORS */
 -- Equal to: =
 -- Different from: !=
