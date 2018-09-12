@@ -30,6 +30,10 @@ FROM table_name;
 -- Select all columns from one table:
 SELECT *
 FROM table_name;
+-- Select all columns from 2 different tables:
+SELECT *
+FROM table1, table2
+WHERE table1.id1 = table2.id2;
 
 /* OPERATORS */
 -- Equal to: =
