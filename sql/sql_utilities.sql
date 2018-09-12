@@ -15,7 +15,7 @@
 /* Comments are also written putting the string: "/*" afterwards the comment, and then closing the comment with this string:
 */
 
--- SELECT INFORMATION FROM TABLE:
+/* SELECT INFORMATION FROM TABLE */
 -- Select all columns from one table:
 SELECT * 
 FROM tablename; /*Select all columns from a table */
@@ -50,7 +50,7 @@ SELECT column1, column2
 FROM table_name
 WHERE column3 BETWEEN value_of_column1 AND value_of_column2;
 
--- VALUES
+/* VALUES */ 
 -- %
 -- Means something (any collection of numbers and letters). The value '%' needs to be used with the operator LIKE.
 SELECT *
@@ -68,17 +68,17 @@ SELECT *
 FROM car
 WHERE price IS NOT NULL;
 
--- WHERE
+/* WHERE */
 SELECT *
 FROM table_name
 WHERE column_name = column_value;
 
--- CREATE A TABLE COPY FROM ANOTHER ONE
+/* CREATE A TABLE COPY FROM ANOTHER ONE */
 SELECT *
     INTO db.new_table
   FROM db.old_table
   
--- ADD A COLUMN TO A TABLE
+/* ADD A COLUMN TO A TABLE */
 ALTER TABLE table_name
   ADD column_name column_TYPE;
 
