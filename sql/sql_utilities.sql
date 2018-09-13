@@ -190,6 +190,14 @@ FROM order
 ORDER BY salary ASC, age DESC;
 
 
+/* UPDATE */
+-- Assign a value to all rows of a single column:
+UPDATE
+	schema_name.table_name
+SET
+	column_name = 'new_value';
+	
+
 
 
 
