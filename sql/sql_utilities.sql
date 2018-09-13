@@ -9,6 +9,8 @@
 -- You only need to specify table_name.column_name in cases where the columns that you want so select have the same name in different tables.
 -- SELECT determines the columns that will appear in the column that is retrieved.
 -- GROUP BY must always be used with an aggregation function.
+-- In GROUP BY queries each column in the SELECT part must either be used later for grouping or it must be used with one of the functions.
+
 
 /* SQL SKETCH */
 SELECT
@@ -17,7 +19,7 @@ JOIN
 ON
 WHERE
 ORDER BY
-
+GROUP BY
 
 /* COMMENTS IN SQL */
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
