@@ -20,6 +20,7 @@ ON
 WHERE
 ORDER BY
 GROUP BY
+HAVING
 
 /* COMMENTS IN SQL */
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
@@ -211,6 +212,8 @@ FROM employees
 WHERE year = 2018
 GROUP BY (department);
 
+
+/* HAVING */
 
 
 
