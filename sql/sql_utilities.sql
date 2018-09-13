@@ -60,9 +60,9 @@ FROM employees;
 -- SELECT count()
 -- Count number of rows / Count number of registries:
 SELECT
-	count(*)
+count(*)
 FROM
-	employees; 
+employees; 
 -- SELECT count(*) counts the rows of the table, SELECT COUNT(variable) counts the registries non NULL in that variable.
 -- Count number of different registries of/in a specific variable:	
 SELECT count(DISTINCT variable)
@@ -77,6 +77,11 @@ FROM employees;
 SELECT
 min(salary)
 FROM employees;
+/* SELECT sum()*/	
+SELECT
+sum(price)
+FROM goods
+WHERE goods.product_type = 'Basic';
 	
 /* OPERATORS */
 -- Equal to: =
