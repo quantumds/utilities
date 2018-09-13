@@ -7,7 +7,7 @@
 -- The good practice in SQL is that text is referred with quotes ''; and numbers without them.
 -- You cannot select all columns from 2 tables without 'WHERE' clause, because SQL will give you the Cartesian product.
 -- You only need to specify table_name.column_name in cases where the columns that you want so select have the same name in different tables.
-
+-- SELECT determines the columns that will appear in the column that is retrieved.
 
 /* SQL SKETCH */
 SELECT
