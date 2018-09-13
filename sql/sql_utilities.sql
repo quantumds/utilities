@@ -60,6 +60,7 @@ FROM employees;
 SELECT DISTINCT department, position
 FROM employees;
 
+
 /* FUNCTIONS/*
 -- SELECT count()
 -- Count number of rows / Count number of registries:
@@ -214,7 +215,7 @@ GROUP BY (department);
 
 
 /* HAVING */
--- HAVING is eclusively used to filter GROUP BY´S
+-- HAVING is eclusively used to filter results inside GROUP BY´S:
 SELECT
   customer_id, 
   order_date, 
@@ -222,7 +223,12 @@ SELECT
 FROM orders 
 GROUP BY customer_id, order_date 
 HAVING sum(total_sum) > 2000;
-
+-- Another case using WHERE and HAVING, where is about a column that is not included in the aggregation (salary):
+SELECT department, avg(salary)
+FROM employees
+WHERE year =2012
+GROUP BY department
+HAVING ((avg(salary) > 3000));
 
 
 
