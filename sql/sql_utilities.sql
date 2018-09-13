@@ -214,8 +214,14 @@ GROUP BY (department);
 
 
 /* HAVING */
-
-
+-- HAVING is eclusively used to filter GROUP BY´S
+SELECT
+  customer_id, 
+  order_date, 
+  sum(total_sum) 
+FROM orders 
+GROUP BY customer_id, order_date 
+HAVING sum(total_sum) > 2000;
 
 
 
