@@ -22,6 +22,7 @@ ORDER BY
 GROUP BY
 HAVING
 
+
 /* COMMENTS IN SQL */
 -- Comments can be done with 2 hyphens: "--" (Everything that is written after these 2 hyphens is a comment. 
 -- But this methodology only works for 1 liners. After entering 'Enter. after the 2 hyphens the text is not considered 
