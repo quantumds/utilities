@@ -91,6 +91,10 @@ WHERE model LIKE 'F%';
 SELECT column1, column2
 FROM table_name
 WHERE column3 BETWEEN value_of_column1 AND value_of_column2;
+-- SELECT avg()
+SELECT 
+avg(salary)
+FROM employees;
 
 
 /* VALUES */ 
@@ -189,14 +193,6 @@ SELECT
 FROM order 
 ORDER BY salary ASC, age DESC;
 
-
-/* UPDATE */
--- Assign a value to all rows of a single column:
-UPDATE
-	schema_name.table_name
-SET
-	column_name = 'new_value';
-	
 
 
 
