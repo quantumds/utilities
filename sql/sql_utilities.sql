@@ -145,6 +145,7 @@ ALTER TABLE table_name
 
 
 /* JOIN */
+-- JOIN is equal to INNER JOIN
 -- All JOIN operations must be accompanied by ON. ALWAYS!!!
 -- Select all columns from an internal join:
 SELECT *
