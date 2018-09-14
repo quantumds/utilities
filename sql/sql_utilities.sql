@@ -182,6 +182,15 @@ RIGHT JOIN person
   ON car.owner_id = person.id;
 
 
+/* FULL JOIN */
+-- FULL JOIN IS THE UNION OF LEFT JOIN and RIGHT JOIN, it is showing all the registries in the left table, in the right table, and add the ones common by the same key.
+SELECT
+  *
+FROM car
+FULL JOIN person
+  ON car.owner_id = person.id;
+  
+  
 /* AS */
 -- Select column from a table and change it to 'column_other':
 SELECT 
