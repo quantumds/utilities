@@ -172,6 +172,16 @@ FROM car
 LEFT JOIN person
   ON car.owner_id = person.id;
 
+
+/* RIGHT JOIN */
+-- RIGHT JOIN is all the registries from the table in the right plus the registries with same identifier or key in the left.
+SELECT
+  *
+FROM car 
+RIGHT JOIN person
+  ON car.owner_id = person.id;
+
+
 /* AS */
 -- Select column from a table and change it to 'column_other':
 SELECT 
