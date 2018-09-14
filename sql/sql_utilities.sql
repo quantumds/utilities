@@ -267,5 +267,16 @@ GROUP BY department
 HAVING ((avg(salary) > 3000));
 
 
-
+/* ALIASES FOR TABLES */
+-- Aliases for tables is used to right less. We use the particle AS after the tables. Same way as it is done with columns.
+SELECT
+  p.id, 
+  p.name, 
+  p.year, 
+  c.id, 
+  c.name, 
+  c.year 
+FROM person AS p 
+JOIN car AS c 
+  ON p.id = c.owner_id;
 
