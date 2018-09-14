@@ -191,6 +191,13 @@ FULL JOIN person
   ON car.owner_id = person.id;
   
   
+/* NATURAL JOIN */
+-- NATURAL JOIN is a type of JOIN where we do not use the ON line. This is because automatically the key are the columns with the same name.
+SELECT
+  * 
+FROM person 
+NATURAL JOIN car;
+
 /* AS */
 -- Select column from a table and change it to 'column_other':
 SELECT 
