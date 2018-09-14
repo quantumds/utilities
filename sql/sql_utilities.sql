@@ -164,7 +164,7 @@ director JOIN movie
 WHERE director.id = movie.director_id;
 
 
-/* LEFT JOIN */
+/* LEFT JOIN / LEFT OUTER JOIN */
 -- LEFT JOIN is all the registries from the table in the left plus the registries with same identifier or key in the right.
 SELECT
   *
@@ -173,7 +173,7 @@ LEFT JOIN person
   ON car.owner_id = person.id;
 
 
-/* RIGHT JOIN */
+/* RIGHT JOIN / RIGHT OUTER JOIN */
 -- RIGHT JOIN is all the registries from the table in the right plus the registries with same identifier or key in the left.
 SELECT
   *
