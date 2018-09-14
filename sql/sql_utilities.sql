@@ -164,6 +164,14 @@ director JOIN movie
 WHERE director.id = movie.director_id;
 
 
+/* LEFT JOIN */
+-- LEFT JOIN is all the registries from the table in the left plus the registries with same identifier or key in the right.
+SELECT
+  *
+FROM car
+LEFT JOIN person
+  ON car.owner_id = person.id;
+
 /* AS */
 -- Select column from a table and change it to 'column_other':
 SELECT 
