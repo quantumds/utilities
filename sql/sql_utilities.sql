@@ -171,7 +171,14 @@ SELECT
 FROM car
 LEFT JOIN person
   ON car.owner_id = person.id;
-
+-- JOIN operations can also be done from one table against itself:
+-- For example, who are the roomates of Jack Pearson?
+SELECT *
+FROM
+student as t1 JOIN student as t2
+ON t1.room_id = t2.room_id
+WHERE t1.name = 'Jack Pearson'
+and t1.id <> t2.id;
 
 /* RIGHT JOIN / RIGHT OUTER JOIN */
 -- RIGHT JOIN is all the registries from the table in the right plus the registries with same identifier or key in the left.
