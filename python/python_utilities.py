@@ -76,6 +76,7 @@ df['column_to_numeric'] = pd.to_numeric(df.column_to_numeric, errors = 'coerce')
 sum(tl_view.isnull().sum())
 # Eliminate missings from entire dataframe:
 df.dropna(axis=0, how='any', inplace = True) # Eliminate rows.
+df.dropna(inplace=True)
 # Total number of missings in entire dataset
 df.isnull().sum()
 # Count number of missings for a column:
