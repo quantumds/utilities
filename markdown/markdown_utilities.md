@@ -1,0 +1,5 @@
+# BOLD
+**text**
+
+# ITALICS
+***text***
