@@ -4,9 +4,13 @@ conda install name_of_package
 # If not available from current channel:
 conda install -c conda-forge name_of_package
 
-# SET GLOBAL WARNINGS IN PYTHON OFF
+# SET GLOBAL WARNINGS IN PYTHON OFF / JUPYTER NOTEBOOK
 import warnings
 warnings.filterwarnings('ignore')
+
+# VISUALIZATION IN JUPYTER NOTEBOOK / IPYTHON
+%matplotlib inline
+from matplotlib import pyplot as plt
 
 # CREATION OF A MOCK DATAFRAME
 # Option 1: 
@@ -231,6 +235,23 @@ df.to_csv(directory_with_slash_at_end + name_of_file_with_extension, sep='|', in
 # VIEW ALL COLUMNS IN A DATAFRAME DATA FRAME DATA SET / IPYTHON JUPYTER
 with pd.option_context('display.max_columns', None):
     print(df)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
