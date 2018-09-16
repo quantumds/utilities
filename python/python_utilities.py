@@ -47,7 +47,7 @@ non_predictive = ["NUM_EXPE_VALO",
                   "DATA_ALTA_REG"]
 data = data.drop(non_predictive, 1) 
 
-# READ DATA / IMPORT DATA / READ CSV FILES / IMPORT CSV
+# READ DATA / READ TABLES / IMPORT DATA / READ CSV FILES / IMPORT CSV
 # Import CSV:
 df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-1', low_memory = False)
 # Other parameters:
@@ -56,6 +56,9 @@ df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-
 # use dtypes argument when all rows are consistent in type: i.e. dtype={'user_id': int}
 # Import parquet files:
 df = pd.read_parquet(file_dir + file_name_perf, engine='pyarrow')
+
+# READ EXCEL / READ EXCEL TABLES / READ .XLS / READ XLS
+df = pd.read_excel('name_of_file.xlsx', converters={'column_1': np.int32, 'column_n':  np.int32}) 
 
 # MERGE / JOIN DATA FRAMES
 df = pd.merge(df1, df2, on = ['variable_1', 'variable_2'], how = 'inner')
