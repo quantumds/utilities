@@ -6,3 +6,12 @@
 
 # BREAK LINE
 <br>
+
+# ADD SPACE / ADD EMPTY SPACE
+&nbsp;
+
+# TITLES IN MARKDOWN
+# Text
+## Text (Smaller)
+### Text (More smaller)
+#### Text (Even more smaller)
