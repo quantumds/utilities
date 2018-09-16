@@ -93,6 +93,9 @@ df.isnull().sum()
 # Show number of missings per column in percentage:
 df.isnull().sum()/len(df)*100
 
+# SORT VALUES / SORT A LIST / SORT A DATAFRAME / ORDER BYR VALUE
+df.sort_values(by = ['col1'], ascending = True, inplace = True) # 'ascending = False' for the other result
+
 # DICTIONARIES
 # Create an initial dictionary with specific size:
 d = {}
