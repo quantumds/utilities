@@ -12,6 +12,13 @@ warnings.filterwarnings('ignore')
 %matplotlib inline
 from matplotlib import pyplot as plt
 
+# WATCH ALL COLUMNS IN DATAFRAME / SEE ALL COLUMNS IN DATA FRAME / VIEW ALL COLUMNS IN TABLE
+import pandas as pd
+from IPython.display import display
+pd.options.display.max_columns = None
+# OTHER WAY OF ACHIEVING THE SAME
+pd.set_option('display.max_columns', len(df.columns)) 
+
 # CREATION OF A MOCK DATAFRAME
 # Option 1: 
 x = [1,1000,1001]
