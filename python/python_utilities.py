@@ -221,6 +221,12 @@ df['name_of_column'] = df['name_of_column'].str.slice(0, 9) # Select characters 
 df.name_of_column = df.name_of_column.str[:9]
 
 # PLOT
+# SEABORN
+import seaborn as sns
+# Histogram without density
+figure(num=None, figsize=(12, 10), dpi=80, facecolor='w', edgecolor='k') # Set size of graph plot
+sns.distplot(part1a_nonull.time_diff, kde = False) # 'bins =' is an additional parameter to tune bins. 'kde = False' omits density.
+# MATPLOTLIB
 import matplotlib.pyplot as plt
 f, ax = plt.subplots(figsize=(35, 28)) # Set size of the graph
 plt.rcParams.update({'font.size': 22})
