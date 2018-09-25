@@ -247,6 +247,24 @@ plt.xlabel("Distance Days") # Assign name of the x label
 plt.ylabel("Frequency") # Assign name of the y label
 plt.title("Distribution of Defects based on Days Distance to the Event") # Assign title of the graph
 plt.show()
+# 2 Histograms overposed
+import numpy as np
+import pylab as plt
+from matplotlib.pyplot import figure
+figure(num=None, figsize=(22, 12), dpi=80, facecolor='w', edgecolor='k') # Size of graph
+# 1 1
+plt.hist(part2b_nonull.loc[part2b_nonull.time_diff <100, 'time_diff'], edgecolor=(0.1,0,0,1), lw=1, facecolor='red', rwidth=0.8, bins = 50, label = "Change from Delivery Delay to Availability Delay type 'OUTLIER'") # First hist
+# 1 0
+plt.hist(part2a_nonull.loc[part2a_nonull.time_diff < 100, 'time_diff'], edgecolor=(0.1,0,0,1), lw=1, facecolor='aqua', rwidth=0.8, bins = 50, label = "Change from Delivery Delay to Availability Delay type 'EXTREME'") # Second hist
+plt.xlabel('Delay Days', size = 19) # Size of x label and name
+plt.ylabel('Count of Occurrences', size = 19) # size of y label and name
+plt.tick_params(axis='both', which='major', labelsize=18) # Size of axis x and y numbers or ticks 
+axvlines(part2b_nonull.median(), color='red', label = 'Median - Change from Deliv. Delay to Avail. Delay type <<OUTLIER>>', linewidth=4) # Vertical line (see functions)
+axvlines(part2a_nonull.median(), color='aqua', label = 'Median - Change from Deliv. Delay to Avail. Delay type <<EXTREME>>', linewidth=4) # Second Vertical line (see functions)
+plt.legend(bbox_to_anchor = (0.16, 0.97), loc=2, borderaxespad=0., prop={'size': 15}) # Legend added automatically with labels names
+# bbox_to_anchor states position of the legend box in format (x,y)
+# loc = 2 states above the graph
+# prop = {'size': 15} indicates size of letters and icons in legend
 
 # VIEW / VIEW A TABLE / VIEW A DATA FRAME / SEE A TABLE / SEE A DATA FRAME
 # View all columns in table:
