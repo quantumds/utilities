@@ -222,9 +222,19 @@ df.name_of_column = df.name_of_column.str[:9]
 
 # PLOT
 # SEABORN
-import seaborn as sns
 # Histogram without density
+import seaborn as sns
+sns.set_style("darkgrid") # Setting the style of the background
 figure(num=None, figsize=(12, 10), dpi=80, facecolor='w', edgecolor='k') # Set size of graph plot
+ax = plt.axes() # Creating the axes to edit properties
+fig = sns.distplot(part1a_nonull.time_diff, kde = False, bins = 100, ax = ax) # Assigning object to the graph
+plt.title("Histogram of parts that changes from NO Delivery Delay to Availability Delay'") # Assigning title to the plot
+plt.xlabel("Days of Delay") # Assigning title to the x label
+plt.ylabel("Count of Occurrences") # Assigning title to the y label
+plt.show(fig)
+
+sns.set_style("darkgrid") 
+figure(num=None, figsize=(12, 10), dpi=80, facecolor='w', edgecolor='k') 
 sns.distplot(part1a_nonull.time_diff, kde = False) # 'bins =' is an additional parameter to tune bins. 'kde = False' omits density.
 # MATPLOTLIB
 import matplotlib.pyplot as plt
