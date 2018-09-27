@@ -233,9 +233,6 @@ plt.xlabel("Days of Delay") # Assigning title to the x label
 plt.ylabel("Count of Occurrences") # Assigning title to the y label
 plt.show(fig)
 
-sns.set_style("darkgrid") 
-figure(num=None, figsize=(12, 10), dpi=80, facecolor='w', edgecolor='k') 
-sns.distplot(part1a_nonull.time_diff, kde = False) # 'bins =' is an additional parameter to tune bins. 'kde = False' omits density.
 # MATPLOTLIB
 import matplotlib.pyplot as plt
 f, ax = plt.subplots(figsize=(35, 28)) # Set size of the graph
