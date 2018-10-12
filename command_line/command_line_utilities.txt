@@ -1,0 +1,10 @@
+# UNIX / MAC
+
+# Delete a folder / directory with all its contents
+ rm -rf name_of_the_directory
+ 
+ # Create a new directory
+ mkdir name_of_new_directory
+ 
+ # Create a new file
+ touch name_of_new_file.txt
