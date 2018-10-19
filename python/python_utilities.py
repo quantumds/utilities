@@ -270,8 +270,9 @@ plt.legend(bbox_to_anchor = (0.16, 0.97), loc=2, borderaxespad=0., prop={'size':
 
 # VIEW / VIEW A TABLE / VIEW A DATA FRAME / SEE A TABLE / SEE A DATA FRAME / VIEW ALL COLUMNS IN A DATAFRAME DATA FRAME DATA SET / IPYTHON JUPYTER
 # View all columns in table:
-with pd.option_context('display.max_columns', None):
-    print(df)
+import pandas as pd
+from IPython.display import display
+pd.options.display.max_columns = None
 
 # RESET INDEX OF A DATAFRAME
 df.reset_index(drop = True, inplace = True)
