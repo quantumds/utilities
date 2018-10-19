@@ -268,7 +268,7 @@ plt.legend(bbox_to_anchor = (0.16, 0.97), loc=2, borderaxespad=0., prop={'size':
 # loc = 2 states above the graph
 # prop = {'size': 15} indicates size of letters and icons in legend
 
-# VIEW / VIEW A TABLE / VIEW A DATA FRAME / SEE A TABLE / SEE A DATA FRAME
+# VIEW / VIEW A TABLE / VIEW A DATA FRAME / SEE A TABLE / SEE A DATA FRAME / VIEW ALL COLUMNS IN A DATAFRAME DATA FRAME DATA SET / IPYTHON JUPYTER
 # View all columns in table:
 with pd.option_context('display.max_columns', None):
     print(df)
@@ -286,9 +286,6 @@ plms[to_cat] = plms[to_cat].apply(lambda x: x.astype('category'))
 # PRINT CSV TABLE / EXPORT CSV TABLE / PRINT TEXT FILES / EXPORT
 df.to_csv(directory_with_slash_at_end + name_of_file_with_extension, sep='|', index = False)
 
-# VIEW ALL COLUMNS IN A DATAFRAME DATA FRAME DATA SET / IPYTHON JUPYTER
-with pd.option_context('display.max_columns', None):
-    print(df)
 
 
 
