@@ -61,11 +61,13 @@ data = data.drop(non_predictive, 1)
 
 # READ DATA / READ TABLES / IMPORT DATA / READ CSV FILES / IMPORT CSV
 # Import CSV:
-df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-1', low_memory = False)
+df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-1', low_memory = False, )
 # Other parameters:
-# error_bad_lines=False
+# error_bad_lines=False # to avoid conflicting lines while reading data
 # quoting = 3 # quote = ""
-# use dtypes argument when all rows are consistent in type: i.e. dtype={'user_id': int}
+# Use dtypes argument when all rows are consistent in type: i.e. dtype={'user_id': int}
+# The dtype argument is highly suggested to be use as it helps in resolving data type conflicts
+# The dtype argument can be applied to only 1 or several variables of all the ones available in the dataset
 # Import parquet files:
 df = pd.read_parquet(file_dir + file_name_perf, engine='pyarrow')
 
@@ -90,9 +92,11 @@ df[df.select_dtypes(['object']).columns] = df.select_dtypes(['object']).apply(la
 # -> Numeric:
 df['column_to_numeric'] = pd.to_numeric(df.column_to_numeric, errors = 'coerce')
 
-# MISSINGS / DATA QUALITY ASSESSMENT
+# MISSINGS / DATA QUALITY ASSESSMENT / DATA QUALITY
 # Count number of missings in entire dataframe:
 sum(tl_view.isnull().sum())
+# Show number of missings per column in percentage:
+df.isnull().sum()/len(df)*100
 # Eliminate missings from entire dataframe:
 df.dropna(axis=0, how='any', inplace = True) # Eliminate rows.
 df.dropna(inplace=True)
