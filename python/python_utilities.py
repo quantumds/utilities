@@ -219,6 +219,7 @@ df['datetime64ns_column_to_change_format'] = df['datetime64ns_column_to_change_f
 df.name_of_column = df.name_of_column.str.slice(0, 9) # Select characters from 0 to 8 (9-1)
 df['name_of_column'] = df['name_of_column'].str.slice(0, 9) # Select characters from 0 to 8 (9-1)
 df.name_of_column = df.name_of_column.str[:9]
+df['name_of_column'] = df['name_of_column'].str.replace("string_pattern_to_be_replaced", 'string_pattern_to_substitute')
 
 # PLOT
 # SEABORN
