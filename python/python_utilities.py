@@ -226,6 +226,8 @@ df.name_of_column = df.name_of_column.str[:9]
 df['name_of_column'] = df['name_of_column'].str.replace("string_pattern_to_be_replaced", 'string_pattern_to_substitute')
 
 # PLOT
+# The arguments for Seaborn work as well for Matplotlib.
+
 # SEABORN
 # Histogram without density
 import seaborn as sns
@@ -267,6 +269,26 @@ plt.legend(bbox_to_anchor = (0.16, 0.97), loc=2, borderaxespad=0., prop={'size':
 # bbox_to_anchor states position of the legend box in format (x,y)
 # loc = 2 states above the graph
 # prop = {'size': 15} indicates size of letters and icons in legend
+
+# How to edit x or y axis ticks density?
+mport matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+import seaborn.apionly as sns
+import numpy as np
+sns.set_style("darkgrid") # Setting the style of the background
+figure(num=None, figsize=(15, 7), dpi=80, facecolor='w', edgecolor='k') # Set size of graph plot
+ax = plt.axes() # Creating the axes to edit properties
+# fig = sns.distplot(qtip_results.loc[(qtip_results.time_diff < 300) , 'time_diff'], kde = False)
+fig = sns.barplot(x = df_grouped.loc[df_grouped.time_diff <100 , 'time_diff'] , y = df_grouped.cnt_of_subsequent_so)
+plt.title("Time Difference for parts that change from Qu-TIP TI to Stock Out") # Assigning title to the plot
+plt.xlabel("Days Between QuTI-P and Stock Out") # Assigning title to the x label
+plt.ylabel("Cases count") # Assigning title to the y label
+ax.yaxis.set_major_locator(ticker.MultipleLocator(250))
+ax.yaxis.set_major_formatter(ticker.ScalarFormatter())
+plt.show(fig)
+
+# How to edit x or y axis density but when they are categorical and you want to set how many ticks there are?
+ax.locator_params(nbins=8, axis='x')
 
 # VIEW / VIEW A TABLE / VIEW A DATA FRAME / SEE A TABLE / SEE A DATA FRAME / VIEW ALL COLUMNS IN A DATAFRAME DATA FRAME DATA SET / IPYTHON JUPYTER
 # View all columns in table:
