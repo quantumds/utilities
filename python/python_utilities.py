@@ -144,8 +144,7 @@ a # the list with the new items.
 # Other form of creating a data frame: 
 x = [1,1000,1001]
 y = [200,300,400]
-cat = ['first','second','third']
-df = pd.DataFrame(dict(x=x, y=y,cat=cat))
+df = pd.DataFrame(dict(name_of_column_1_without_quotes = x, name_of_column_2_without_quotes = y))
 
 # SORT / ORDER
 sorted(list)
