@@ -141,6 +141,10 @@ for i in range(5):
     a.append(i)
 a # the list with the new items.
 
+# SORT / ORDER
+sorted(list)
+list.sorted()
+
 # SEQUENCES / RANGES
 # Create a simple sequence in Pandas:
 [i for i in range(beginning, ending + 1)] # Range ends below the upper limit by 1 position
