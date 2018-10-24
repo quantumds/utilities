@@ -141,6 +141,11 @@ for i in range(5):
     a.append(i)
 a # the list with the new items.
 
+# SEQUENCES / RANGES
+# Create a simple sequence in Pandas:
+pd.Series(range(beginning, ending))
+Ex: pd.Series(range(1,101))
+
 # SELECT / FILTER DATA / FILTER A DATASET / FILTER DATAFRAME / EXCLUDE / NOT SELECT / ASSIGNATION / ASSIGN
 # Index numeric, column by name:
 df.loc[df.index[number_desired_of_index], 'name_of_column']
