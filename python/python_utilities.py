@@ -140,6 +140,12 @@ a=[]
 for i in range(5):    
     a.append(i)
 a # the list with the new items.
+# Convert a list to a Data Frame / Convert a list to a dataframe
+# Other form of creating a data frame: 
+x = [1,1000,1001]
+y = [200,300,400]
+cat = ['first','second','third']
+df = pd.DataFrame(dict(x=x, y=y,cat=cat))
 
 # SORT / ORDER
 sorted(list)
