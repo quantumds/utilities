@@ -143,8 +143,7 @@ a # the list with the new items.
 
 # SEQUENCES / RANGES
 # Create a simple sequence in Pandas:
-pd.Series(range(beginning, ending))
-Ex: pd.Series(range(1,101))
+[i for i in range(beginning, ending + 1)] # Range ends below the upper limit by 1 position
 
 # SELECT / FILTER DATA / FILTER A DATASET / FILTER DATAFRAME / EXCLUDE / NOT SELECT / ASSIGNATION / ASSIGN
 # Index numeric, column by name:
