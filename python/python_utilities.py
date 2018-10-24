@@ -66,6 +66,14 @@ df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-
 # error_bad_lines=False # to avoid conflicting lines while reading data
 # quoting = 3 # quote = ""
 # Use dtypes argument when all rows are consistent in type: i.e. dtype={'user_id': int}
+# dtypes in Pandas:
+# 'object'
+# 'np.int64'
+# 'np.float64'
+# 'bool'
+# 'datetime64'
+# 'timedelta[ns]'
+# 'category'
 # The dtype argument is highly suggested to be use as it helps in resolving data type conflicts
 # The dtype argument can be applied to only 1 or several variables of all the ones available in the dataset
 # Import parquet files:
