@@ -246,6 +246,10 @@ df['name_of_column'] = df['name_of_column'].str.slice(0, 9) # Select characters 
 df.name_of_column = df.name_of_column.str[:9]
 df['name_of_column'] = df['name_of_column'].str.replace("string_pattern_to_be_replaced", 'string_pattern_to_substitute')
 
+# GROUP BY
+# Group by and Sum
+df.groupby(['ke1', 'key2'])['col_to_operate_aggregate'].agg('sum')
+
 # PLOT
 # The arguments for Seaborn work as well for Matplotlib.
 
