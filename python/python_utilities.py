@@ -225,15 +225,15 @@ df.columns = df.columns.str.replace(' +$', '_')
 # To replace white space at both ends:
 df.columns = df.columns.str.replace('^ +| +$', '_')
 
-# DATE / DATETIME
+# DATE / DATETIME / TIMESTAMP
+# Convert String to Date Time / String -> Datetime / Change a string type: 20180931
+df['name_of_column'] = df['name_of_column'].apply(pd.to_datetime, format = '%Y%m%d', errors = 'coerce')  
 # Convert object to datetime/date type:
 df['name_of_column'] =  pd.to_datetime(df['name_of_column'], format='%d%b%Y:%H:%M:%S.%f')
 # Convert a string variable a dataframe to date.
 # %Y is 2018
 # %m is 09
 # %d is 31
-# Change a string type: 20180931
-df['name_of_column'] = df['name_of_column'].apply(pd.to_datetime, format = '%Y%m%d', errors = 'coerce')  
 # CHANGE DATE (DATETIME64NS) FROM ONE FORMAT TO ANOTHER / FORMATS
 df['datetime64ns_column_to_change_format'] = pd.to_datetime(df.datetime64ns_column_to_change_format)
 df['datetime64ns_column_to_change_format'] = df['datetime64ns_column_to_change_format'].dt.strftime('format_desired')
