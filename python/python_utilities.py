@@ -23,6 +23,8 @@ pd.set_option('display.max_columns', len(df.columns))
 # Scroll bar appears when the plot is too BIG. With one click you can hide it or show it completely.
 # To eliminate the scrolling bar in outputs, simply click on the left side of the graph over 'Out[number]' part, while it has the scrolling bar. It will
 # turn back to normality.
+# Stop a Jupyter Notebook in a specific cell after executing whole Notebook:
+raise
 
 # CREATION OF A MOCK DATAFRAME
 # Option 1: 
