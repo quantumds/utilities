@@ -33,6 +33,18 @@ y = [200,300,400]
 cat = ['first','second','third']
 df = pd.DataFrame(dict(speed = x, price = y, place = cat))
 
+# CHECK IF 2 DATA FRAMES ARE EQUAL OR NOT
+# First we reset indexes to be safe
+df1.reset_index(drop = True, inplace = True)
+df2.reset_index(drop = True, inplace = True)
+# Option 1
+(np.allclose(df1.select_dtypes(exclude=[object]), df2.select_dtypes(exclude=[object]))
+   .....:  &
+   .....:  df1.select_dtypes(include=[object]).equals(df2.select_dtypes(include=[object]))
+   .....: ) 
+#Option 2
+assert_frame_equal(con_df_filtered, con_df_monthly_filtered, check_dtype = False) 
+
 # FREQUENCY TABLES
 plms['isfiller'].value_counts()
 
