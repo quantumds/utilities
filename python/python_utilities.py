@@ -132,6 +132,8 @@ df['hardship_amount'].isnull().sum()
 df.isnull().sum()
 # Show number of missings per column in percentage:
 df.isnull().sum()/len(df)*100
+# Replace missing values with 0:
+df[np.isnan(df)] = 0
 
 # SORT VALUES / SORT A LIST / SORT A DATAFRAME / ORDER BYR VALUE
 df.sort_values(by = ['col1'], ascending = True, inplace = True) # 'ascending = False' for the other result
