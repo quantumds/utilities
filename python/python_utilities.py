@@ -272,25 +272,38 @@ df.groupby(['ke1', 'key2'])['col_to_operate_aggregate'].agg('sum')
 # The arguments for Seaborn work as well for Matplotlib.
 
 # COMPLETE EXAMPLE
+#------Graph Size------
 #Plot original time series and daily mean
 # Size of the graph 
 fig = plt.figure(figsize=(28, 18))
+# Size of the graph in a more complete and complex way (more features)
+fig, ax = plt.subplots(figsize=(28, 18))
 # Adding a subgraph with a 2nd Time Series in the same plot
 ax = fig.add_subplot(1,1,1)
-# Size of Ticks
+#------Ticks Size------
+# Size of Ticks, How big are the numbers and marks in each axis?
 plt.tick_params(axis = 'both', which = 'major', labelsize = 24)
 plt.tick_params(axis = 'both', which = 'major', labelsize = 24)
-# Size of Labels in each Axis
-plt.title("Hola", size = 25)
-plt.xlabel('Time difference (Days)', size = 22)
-plt.ylabel('Count of Occurrences', size = 22)
-# Plots and labels for adding at the end a Legend
+#------Ticks Frequency------
+# X Axis
+ax.xaxis.set_major_locator(ticker.MultipleLocator(250)) # The number 250 represents the desired increase pattern in the axis
+ax.xaxis.set_major_formatter(ticker.ScalarFormatter()) # X Axis
+# Y Axis
+ax.yaxis.set_major_locator(ticker.MultipleLocator(250)) # The number 250 represents the desired increase pattern in the axis
+ax.yaxis.set_major_formatter(ticker.ScalarFormatter()) # y Axis
+#------Names of Labels and Size of Labels------
+# Title and Size of Labels in each Axis
+plt.title("Hola", size = 25) # Main Title
+plt.xlabel('Time difference (Days)', size = 22) # X Axis Title
+plt.ylabel('Count of Occurrences', size = 22) # Y Axis Title
+# Other way of achieving the same using the parameter ax:
+ax.set_title('Time Series Inventory Level', fontsize = 24) # Main Title
+ax.set_xlabel('Time (Daily Aggregation)') # X Axis Title
+ax.set_ylabel('Inventory Level (Number of Units in Stock)') # Y Axis Title
+#------Legend------
+# Use of argument "label = "
 dayly_mean.plot(ax=ax, color='b', label = 'Time Series of Inventory Levels on Daily Data')
 monthly_mean.plot(ax=ax, color='r', label = 'Time Series of Inventory Levels on Monthly Data')
-# Names of labels in each axis
-ax.set_title('Time Series Inventory Level', fontsize = 24)
-ax.set_xlabel('Time (Daily Aggregation)')
-ax.set_ylabel('Inventory Level (Number of Units in Stock)')
 # Add legend ('bbox_to_anchor' is the position of the legend; 'size' is size of letters in legend)
 plt.legend(bbox_to_anchor = (0.02, 0.97), loc=2, borderaxespad=0., prop={'size': 20})
 
