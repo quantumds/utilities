@@ -281,6 +281,7 @@ ax = fig.add_subplot(1,1,1)
 plt.tick_params(axis = 'both', which = 'major', labelsize = 24)
 plt.tick_params(axis = 'both', which = 'major', labelsize = 24)
 # Size of Labels in each Axis
+plt.title("Hola", size = 25)
 plt.xlabel('Time difference (Days)', size = 22)
 plt.ylabel('Count of Occurrences', size = 22)
 # Plots and labels for adding at the end a Legend
