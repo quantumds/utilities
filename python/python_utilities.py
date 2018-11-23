@@ -85,9 +85,11 @@ df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-
 # 'np.int64'
 # 'np.float64'
 # 'bool'
-# 'datetime64'
-# 'timedelta[ns]'
 # 'category'
+# dtype doesn't work with dates. For dates we need to use the following:
+parse_dates = ['col1date', 'col2date']
+df = pd.read_csv(data_dir + df_name, sep = ',', header = 0, encoding = 'latin-1', low_memory = False, dtype={'col1date':'str', 'col2date':'str'}, parse_dates = parse_dates)
+# This method automatically parses recognizing the string.
 # The dtype argument is highly suggested to be use as it helps in resolving data type conflicts
 # The dtype argument can be applied to only 1 or several variables of all the ones available in the dataset
 # Import parquet files:
