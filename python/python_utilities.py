@@ -286,7 +286,7 @@ ax = fig.add_subplot(1,1,1)
 # Size of Ticks, How big are the numbers and marks in each axis?
 plt.tick_params(axis = 'both', which = 'major', labelsize = 24)
 plt.tick_params(axis = 'both', which = 'major', labelsize = 24)
-#------Ticks Frequency------
+#------Ticks Frequency / Ticks Density------
 # X Axis
 ax.xaxis.set_major_locator(ticker.MultipleLocator(250)) # The number 250 represents the desired increase pattern in the axis
 ax.xaxis.set_major_formatter(ticker.ScalarFormatter()) # X Axis
