@@ -8,3 +8,5 @@ println(object_to_print)
 
 # TYPE OF AN OBJECT
 typeof(name_of_object)
+
+# DATA TYPE CASTING / DATA TYPE CONVERSION
