@@ -78,6 +78,8 @@ data = data.drop(non_predictive, 1)
 df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-1', low_memory = False, )
 # Other parameters:
 # error_bad_lines=False # to avoid conflicting lines while reading data
+# delim_whitespace = True # When the separator separation is tab or tabulator
+# header = None # Means NO header
 # quoting = 3 # quote = ""
 # Use dtypes argument when all rows are consistent in type: i.e. dtype={'user_id': int}
 # dtypes in Pandas:
