@@ -7,6 +7,9 @@ names(df)[names(df) == 'old_var_name'] <- 'new_var_name'
 # SAMPLING / SAMPLE RANDOM ROWS / SELECT RANDOM ROWS / RANDOM ROWS SELECTION
 df[sample(nrow(df), 3), ] # Select 3 random rows of df
 
+# SAVE AN RDA FILE IN R
+save(object1, object2, object3, file = "route/mydata.rda")
+
                             #FORMULARIO
 
 #data <- read.table("cup98lrn.txt", header = TRUE, sep = ",", quote="", fill = T, stringsAsFactors = T, na.strings=c(""," ","  ","   ","NA"))
