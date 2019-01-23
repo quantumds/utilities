@@ -19,6 +19,9 @@ pd.options.display.max_columns = None
 # OTHER WAY OF ACHIEVING THE SAME
 pd.set_option('display.max_columns', len(df.columns)) 
 
+# SEE ALL ELEMENTS IN A FOLDER / LIST ALL FILES IN A DIRECTORY
+os.listdir()
+
 # JUPYTER NOTEBOOKS / IPYTHON / HIDE SCROLLING BAR / SCROLL BAR / GRAPHS
 # Scroll bar appears when the plot is too BIG. With one click you can hide it or show it completely.
 # To eliminate the scrolling bar in outputs, simply click on the left side of the graph over 'Out[number]' part, while it has the scrolling bar. It will
