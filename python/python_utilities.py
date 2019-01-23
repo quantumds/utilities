@@ -8,6 +8,9 @@ conda install -c conda-forge name_of_package
 import warnings
 warnings.filterwarnings('ignore')
 
+# SET WORKING DIRECTORY
+os.chdir(path_route)
+
 # VISUALIZATION IN JUPYTER NOTEBOOK / IPYTHON
 %matplotlib inline
 from matplotlib import pyplot as plt
