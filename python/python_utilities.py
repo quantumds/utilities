@@ -51,6 +51,9 @@ df2.reset_index(drop = True, inplace = True)
 #Option 2
 assert_frame_equal(con_df_filtered, con_df_monthly_filtered, check_dtype = False) 
 
+# FILTER DATA FRAME WITH VALUES IN ANOTHER DATA FRAME
+df.loc[df['column_name_to_filter'].isin(reference_values_of_a_column_in_other_df)]
+
 # FREQUENCY TABLES
 plms['isfiller'].value_counts()
 
