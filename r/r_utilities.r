@@ -10,6 +10,10 @@ df[sample(nrow(df), 3), ] # Select 3 random rows of df
 # SAVE AN RDA FILE IN R
 save(object1, object2, object3, file = "route/mydata.rda")
 
+# PASTE A VECTOR OF STRINGS OR CHARACTERS
+vector_strings <- c("paste", "this", "phrase")
+paste(vector_strings, collapse = '')
+
                             #FORMULARIO
 
 #data <- read.table("cup98lrn.txt", header = TRUE, sep = ",", quote="", fill = T, stringsAsFactors = T, na.strings=c(""," ","  ","   ","NA"))
