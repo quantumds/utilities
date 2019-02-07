@@ -149,6 +149,10 @@ df.isnull().sum()
 df.isnull().sum()/len(df)*100
 # Replace missing values with 0:
 df[np.isnan(df)] = 0
+# Replace all blank spaces with Nan:
+df.replace(r'\s+', np.nan, regex = True, inplace = True)
+# Show table or registries without missing values (complete table sample):
+df[~df.isnull().any(axis=1)]
 
 # SORT VALUES / SORT A LIST / SORT A DATAFRAME / ORDER BYR VALUE
 df.sort_values(by = ['col1'], ascending = True, inplace = True) # 'ascending = False' for the other result
