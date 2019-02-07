@@ -282,6 +282,12 @@ df['datetime64ns_column_to_change_format'] = pd.to_datetime(df.datetime64ns_colu
 df['datetime64ns_column_to_change_format'] = df['datetime64ns_column_to_change_format'].dt.strftime('format_desired')
 # Example of formats:
 '%Y-%m-%d %H:%M:%S'
+# Date difference / Difference of Dates in years
+df.diff_dates_col = df.date1 - df.date2
+df.diff_dates_col / dt.timedelta(days = 365)
+# Date difference / Difference of Dates in days
+df.diff_dates_col = df.date1 - df.date2
+df.diff_dates_col / dt.timedelta(days = 1)
 
 # SUBSTRING / CHARACTER SELECTION / STRING SELECTION
 df.name_of_column = df.name_of_column.str.slice(0, 9) # Select characters from 0 to 8 (9-1)
