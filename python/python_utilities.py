@@ -183,6 +183,12 @@ x = [1,1000,1001]
 y = [200,300,400]
 df = pd.DataFrame(dict(name_of_column_1_without_quotes = x, name_of_column_2_without_quotes = y))
 
+# ELEMENTS OF A LIST INSIDE ANOTHER LIST
+list(set(list1) - set(list2))
+
+# ELEMENTS OF A DATA FRAME INSIDE ANOTHER DATA FRAME
+.isin()
+
 # SORT / ORDER
 sorted(list)
 list.sorted()
