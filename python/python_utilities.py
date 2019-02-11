@@ -210,6 +210,8 @@ df.loc[:, df.columns != 'name_of_column_to_exclude']
 dfx = df[~df['name_of_variable'].isin(list_with_values_of_variable_to_filter)] # You obtain the registries of the dataframe that do not have the values of the list in the specified variable
 dfx = df[df['name_of_variable'].isin(list_with_values_of_variable_to_filter)] # You obtain the registries of the dataframe that DO have the values of the list in the specified variable
 unified['col-2'].isin(eventcodesprod) #Condition: 'take registries where 'col-2' has any value inside eventcodesprod
+# Filter data frame when column must be equal to several values, without repeating logical operators, only specifying different values:
+df.loc[ (df.column_to_filter.isin(["Value_desired_1", "Value_desired_2"])) , : ]
 
 # CREATE NEW COLUMN / ADD NEW COLUMN / ADD NEW FEATURE / ADD NEW VARIABLE
 df['name_of_new_column'] = pd.Series(np.nan , index = df.index)
