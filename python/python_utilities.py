@@ -410,6 +410,12 @@ import pandas as pd
 from IPython.display import display
 pd.options.display.max_columns = None
 
+# REGEX
+# Eliminate all blank spaces before the beginning of the first letter and fter the end of the last letter you see in th PC:
+df.column_desired = df.column_desired.str.strip()
+# Elimination of contiguous unnecesry blank spaces:
+df = df.applymap(lambda x: np.nan if isinstance(x, str) and (not x or x.isspace()) else x)
+
 # RESET INDEX OF A DATAFRAME
 df.reset_index(drop = True, inplace = True)
 
