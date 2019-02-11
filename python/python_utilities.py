@@ -201,6 +201,17 @@ list.sorted()
 # Create a simple sequence in Pandas:
 [i for i in range(beginning, ending + 1)] # Range ends below the upper limit by 1 position
 
+# SELECT DATA FROM ONE TYPE / SUBSET DATA
+# Select integer data:
+df.select_dtypes(include=['integer'])
+# Select numerical data:
+df.select_dtypes(include=['float64'])
+df._get_numeric_data() # 2nd option
+# Select object/string data
+df.select_dtypes(include=['object'])
+# Select categorical Data:
+df.select_dtypes(include=['category'])
+
 # SELECT / FILTER DATA / FILTER A DATASET / FILTER DATAFRAME / EXCLUDE / NOT SELECT / ASSIGNATION / ASSIGN
 # Index numeric, column by name:
 df.loc[df.index[number_desired_of_index], 'name_of_column']
