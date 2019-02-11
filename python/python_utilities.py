@@ -202,11 +202,12 @@ list.sorted()
 [i for i in range(beginning, ending + 1)] # Range ends below the upper limit by 1 position
 
 # SELECT DATA FROM ONE TYPE / SUBSET DATA
+# Select numerical data (it includes integer and float64 as well):
+df._get_numeric_data() # 2nd option
+# Select float64 data:
+df.select_dtypes(include=['float64'])
 # Select integer data:
 df.select_dtypes(include=['integer'])
-# Select numerical data:
-df.select_dtypes(include=['float64'])
-df._get_numeric_data() # 2nd option
 # Select object/string data
 df.select_dtypes(include=['object'])
 # Select categorical Data:
