@@ -1,3 +1,7 @@
+# CHANGE COLOR OF JUPYTER CELLS
+# <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
+<font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
+
 # INSTALL PACKAGES IN ANACONDA:
 # Standard way:
 conda install name_of_package
