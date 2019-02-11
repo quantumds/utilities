@@ -278,8 +278,8 @@ df['name_of_column'] =  pd.to_datetime(df['name_of_column'], format='%d%b%Y:%H:%
 # %m is 09
 # %d is 31
 # CHANGE DATE (DATETIME64NS) FROM ONE FORMAT TO ANOTHER / FORMATS
-df['datetime64ns_column_to_change_format'] = pd.to_datetime(df.datetime64ns_column_to_change_format)
-df['datetime64ns_column_to_change_format'] = df['datetime64ns_column_to_change_format'].dt.strftime('format_desired')
+df['datetime64ns_column_to_change_format'] = pd.to_datetime(df.datetime64ns_column_to_change_format) # 1st step of 2
+df['datetime64ns_column_to_change_format'] = df['datetime64ns_column_to_change_format'].dt.strftime('format_desired') # 2nd step of 2
 # Example of formats:
 '%Y-%m-%d %H:%M:%S'
 # Date difference / Difference of Dates in years
