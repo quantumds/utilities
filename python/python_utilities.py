@@ -1,3 +1,7 @@
+# SHOW COMPLETE SIZE OF LSIT / LIST SIZE / INCREASE LIST SIZE
+pd.options.display.max_rows = 50 # Option 1
+pd.options.display.max_rows = len(df.columns) # Option 2
+
 # CHANGE COLOR OF JUPYTER CELLS
 # <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
 <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
