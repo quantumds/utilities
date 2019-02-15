@@ -1,4 +1,4 @@
-# SHOW COMPLETE SIZE OF LSIT / LIST SIZE / INCREASE LIST SIZE
+# SHOW COMPLETE SIZE OF LIST / LIST SIZE / INCREASE LIST SIZE
 pd.options.display.max_rows = 50 # Option 1
 pd.options.display.max_rows = len(df.columns) # Option 2
 
