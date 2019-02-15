@@ -1,3 +1,7 @@
+# LOAD EXTERNAL JUPYTER NOTEBOOK IN A CELL
+%run name_of_notebook.ipynb
+%run ./name_of_notebook.ipynb # Other way of doing the same
+
 # SHOW COMPLETE SIZE OF LIST / LIST SIZE / INCREASE LIST SIZE
 pd.options.display.max_rows = None
 pd.options.display.max_rows = 50 # Other option
