@@ -894,3 +894,25 @@ def pca_scatter(pca, standardised_values, classifs, first, second):
     foo = pca.transform(standardised_values)
     bar = pd.DataFrame(list(zip(foo[:, first-1], foo[:, second-1], classifs)), columns=[str("PC"+str(first)), str("PC"+str(second)), "Class"])
     sns.lmplot(str("PC"+str(first)), str("PC"+str(second)), bar, hue="Class", fit_reg=False)
+
+# PARETO CHART IN PYTHON
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.ticker import PercentFormatter
+
+df = pd.DataFrame({'country': [177.0, 7.0, 4.0, 2.0, 2.0, 1.0, 1.0, 1.0]})
+df.index = ['USA', 'Canada', 'Russia', 'UK', 'Belgium', 'Mexico', 'Germany', 'Denmark']
+df = df.sort_values(by='country',ascending=False)
+df["cumpercentage"] = df["country"].cumsum()/df["country"].sum()*100
+print(df)
+
+fig = plt.figure(figsize=(15, 15))
+ax = fig.add_subplot(1,1,1)
+ax.bar(df.index, df["country"], color="C0")
+ax2 = ax.twinx()
+ax2.plot(df.index, df["cumpercentage"], color="C1", marker="D", ms=7)
+ax2.yaxis.set_major_formatter(PercentFormatter())
+
+ax.tick_params(axis="y", colors="C0")
+ax2.tick_params(axis="y", colors="C1")
+plt.show()
