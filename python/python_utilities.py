@@ -1362,3 +1362,7 @@ def pca_scatter(pca, standardised_values, classifs, first, second):
     foo = pca.transform(standardised_values)
     bar = pd.DataFrame(list(zip(foo[:, first-1], foo[:, second-1], classifs)), columns=[str("PC"+str(first)), str("PC"+str(second)), "Class"])
     sns.lmplot(str("PC"+str(first)), str("PC"+str(second)), bar, hue="Class", fit_reg=False)
+
+# VIF
+pd.Series([variance_inflation_factor(Xc.values, i) for i in range(Xc.shape[1])], index = Xc.columns)
+      
