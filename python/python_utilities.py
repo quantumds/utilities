@@ -8,6 +8,9 @@ pd.options.display.max_rows = None
 # SHOW COMPLETE TABLE / SHOW ALL COLUMNS / VIEW ALL COLUMNS
 pd.options.display.max_columns = None 
 
+# PRINT DATAFRAME WITH COLUMNS IN ALPHABETICAL ORDER / VIEW DATAFRAME WITH COLUMNS ORDERED ALPHABETICALLY
+df.sort_index(axis=1, inplace=True)
+
 # CHANGE COLOR OF JUPYTER CELLS
 # <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
 <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
