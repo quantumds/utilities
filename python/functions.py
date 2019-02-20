@@ -442,3 +442,36 @@ def pca_scatter(pca, standardised_values, classifs, first, second):
     bar = pd.DataFrame(list(zip(foo[:, first-1], foo[:, second-1], classifs)), columns=[str("PC"+str(first)), str("PC"+str(second)), "Class"])
     sns.lmplot(str("PC"+str(first)), str("PC"+str(second)), bar, hue="Class", fit_reg=False)
 
+# CHECK MULTICOLLINEARITY / VIFS IN PYTHON
+from statsmodels.stats.outliers_influence import variance_inflation_factor 
+from statsmodels.tools.tools import add_constant
+def calculate_vif_(df, thresh=5):
+    '''
+    Calculates VIF each feature in a pandas dataframe
+    A constant must be added to variance_inflation_factor or the results will be incorrect
+
+    :param X: the pandas dataframe
+    :param thresh: the max VIF value before the feature is removed from the dataframe
+    :return: dataframe with features removed
+    '''
+    const = add_constant(df)
+    cols = const.columns
+    variables = np.arange(const.shape[1])
+    vif_df = pd.Series([variance_inflation_factor(const.values, i) 
+               for i in range(const.shape[1])], 
+              index=const.columns).to_frame()
+
+    vif_df = vif_df.sort_values(by=0, ascending=False).rename(columns={0: 'VIF'})
+    vif_df = vif_df.drop('const')
+    vif_df = vif_df[vif_df['VIF'] > thresh]
+
+    print ('Features above VIF threshold:\n')
+    print (vif_df[vif_df['VIF'] > thresh])
+
+    col_to_drop = list(vif_df.index)
+
+    for i in col_to_drop:
+        print ('Dropping: {}'.format(i))
+        df = df.drop(columns=i)
+
+    return df
