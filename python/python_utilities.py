@@ -4,7 +4,9 @@
 
 # SHOW COMPLETE SIZE OF LIST / LIST SIZE / INCREASE LIST SIZE
 pd.options.display.max_rows = None
-pd.options.display.max_rows = 50 # Other option
+
+# SHOW COMPLETE TABLE / SHOW ALL COLUMNS / VIEW ALL COLUMNS
+pd.options.display.max_columns = None 
 
 # CHANGE COLOR OF JUPYTER CELLS
 # <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
