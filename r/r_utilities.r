@@ -91,6 +91,9 @@ character <- data[ ,char]
 no_char <- !sapply(data, is.character) #Calcula las variables que no son caracter
 no_character <- data[ ,no_char]
 
+# FILTER DATA FRAME BY COLUMN
+data[,-c(which(colnames(data)=="VAR1"), which(colnames(data)=="VAR2")) ]
+              
 #RECODIFICAR VARIABLES CATEGÓRICAS (MAPVALUES)
 data$variable_a_recodificar <- mapvalues(data$variable_a_recodificar, c("valor1","valor2", ...), c("valor1_nuevo","valor2_nuevo",...))
 
@@ -117,7 +120,7 @@ data[names(ou$p),]
 data <- data[-c(as.numeric(names(ou$p))),]
 nrow(data)
 
-#MODELO DE REGRESIÓN LINEAL
+# LINEAR REGRESSION MODEL
 rownames(data) <- seq_len(nrow(data))
 linear_model <- lm(data$VAR_RESP ~ . , data[,-c(which(colnames(data)=="VAR1"),which(colnames(data)=="VAR2") ) ])
 summary(linear_model) 
