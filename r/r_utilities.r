@@ -93,7 +93,8 @@ no_character <- data[ ,no_char]
 
 # FILTER DATA FRAME BY COLUMN
 data[,-c(which(colnames(data)=="VAR1"), which(colnames(data)=="VAR2")) ]
-              
+data[,-c(which(colnames(data)=="VAR1")) ]
+            
 #RECODIFICAR VARIABLES CATEGÓRICAS (MAPVALUES)
 data$variable_a_recodificar <- mapvalues(data$variable_a_recodificar, c("valor1","valor2", ...), c("valor1_nuevo","valor2_nuevo",...))
 
