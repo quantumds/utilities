@@ -167,7 +167,8 @@ df.isnull().sum()/len(df)*100
 # Replace missing values with 0:
 df[np.isnan(df)] = 0
 # Replace all blank spaces with Nan:
-df.replace(r'\s+', np.nan, regex = True, inplace = True)
+df_revisions = df_revisions.replace(r'^\s+$', np.nan, regex=True)
+df.replace(r'\s+', np.nan, regex = True, inplace = True) # Alternative solution that may no work
 # Show table or registries without missing values (complete table sample):
 df[~df.isnull().any(axis=1)]
 
