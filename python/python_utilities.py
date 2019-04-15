@@ -300,6 +300,9 @@ df.columns = df.columns.str.replace(' +$', '_')
 # To replace white space at both ends:
 df.columns = df.columns.str.replace('^ +| +$', '_')
 
+# DUMMIES / ONE-HOT ENCODING / ONE HOT ENCODING / BINARIZING DATA
+df = pd.get_dummies(df, drop_first = False)
+
 # DATE / DATETIME / TIMESTAMP
 # Convert String to Date Time / String -> Datetime / Change a string type: 20180931
 df['name_of_column'] = df['name_of_column'].apply(pd.to_datetime, format = '%Y%m%d', errors = 'coerce')  
