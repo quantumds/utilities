@@ -441,6 +441,10 @@ import pandas as pd
 from IPython.display import display
 pd.options.display.max_columns = None
 
+# CROSS VALIDATION / TRAIN TEST SPLITTING / CROSS-VALIDATION / 
+labels = finaldf.SUCC
+X_train, X_test, y_train, y_test = train_test_split(finaldf, labels, test_size = 0.3)
+
 # REGEX
 # Eliminate all blank spaces before the beginning of the first letter and fter the end of the last letter you see in th PC:
 df.column_desired = df.column_desired.str.strip()
