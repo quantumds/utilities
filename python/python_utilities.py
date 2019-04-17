@@ -160,7 +160,7 @@ sum(tl_view.isnull().sum())
 df.isnull().sum()/len(df)*100
 # Eliminate missings from entire dataframe:
 df.dropna(axis=0, how='any', inplace = True) # Eliminate rows.
-df.dropna(inplace=True)
+df.dropna(inplace=True) # The same in another way
 # Total number of missings in entire dataset
 df.isnull().sum()
 # Count number of missings for a column:
