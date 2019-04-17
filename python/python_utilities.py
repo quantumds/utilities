@@ -3,6 +3,7 @@
 %run ./name_of_notebook.ipynb # Other way of doing the same
 
 # OBTAIN COLUMN TYPES IN ALPHABETICAL ORDER / PRINT COLUMN TYPES ALPHABETICALLY
+print(df.sort_index(axis=1).dtypes)
 df.dtypes.sort_index()
 df.sort_index(axis=1).dtypes # Does the same
 
@@ -1377,4 +1378,17 @@ def pca_scatter(pca, standardised_values, classifs, first, second):
 
 # VIF
 pd.Series([variance_inflation_factor(Xc.values, i) for i in range(Xc.shape[1])], index = Xc.columns)
-      
+
+# SORT DATA FRAME WITH COLUMNS IN ALPHABETICAL ORDER
+def sortdf(df):
+    df.sort_index(axis = 1, inplace = True)
+    return(df)
+
+# PRINT ALL ROWS OF DATA FRAMES 
+def maxrows():
+    pd.options.display.max_rows = None
+    return()
+
+# OBTAIN ALL TYPES OF COLUMN NAMES IN ALPHABETICAL ORDER
+def types(df):
+    return(print(df.dtypes.sort_index()))
