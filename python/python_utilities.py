@@ -2,6 +2,10 @@
 %run name_of_notebook.ipynb
 %run ./name_of_notebook.ipynb # Other way of doing the same
 
+# OBTAIN COLUMN TYPES IN ALPHABETICAL ORDER / PRINT COLUMN TYPES ALPHABETICALLY
+df.dtypes.sort_index()
+df.sort_index(axis=1).dtypes # Does the same
+
 # SHOW COMPLETE SIZE OF LIST / LIST SIZE / INCREASE LIST SIZE
 pd.options.display.max_rows = None
 
