@@ -346,6 +346,7 @@ df.groupby(['ke1', 'key2'])['col_to_operate_aggregate'].agg('sum')
 # The arguments for Seaborn work as well for Matplotlib.
 
 # COMPLETE EXAMPLE
+import matplotlib.ticker as ticker
 #------Graph Size------
 #Plot original time series and daily mean
 # Size of the graph 
