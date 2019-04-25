@@ -254,12 +254,15 @@ df.rename(columns={'column_name_to_change':'new_column_name'}, inplace=True)
 # Save a model:
 import pickle
 pickle.dump(name_of_object_to_save, open('route/desired_name_of_file.pickle', 'wb'))
+# Method useful for pandas dataframes:
+df.to_pickle('name_of_file_saved.pickle')  # where to save it, usually as a .pkl
+
+# LOAD PICKLE FILE
 # Load model:
 loaded_model = pickle.load(open('route/desired_name_of_file.pickle', 'rb'))
 result = loaded_model.score(X_test, Y_test) *# for example, to obtain predictions
 print(result)
-# Method useful only for pandas dataframes:
-df.to_pickle('name_of_file_saved.pickle')  # where to save it, usually as a .pkl
+# For Data Frames:
 object_saved = pd.read_pickle('name_of_file_saved.pickle')
 
 # CROSS VALIDATION / TRAIN - TEST SPLITTING / DIVIDE DATASET / SELECT TRAIN AND TEST
