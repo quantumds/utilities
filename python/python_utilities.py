@@ -193,6 +193,8 @@ name_of_dict.keys()
 list(name_of_dict.keys())
 # Access elments of the dictionary:
 list(name_of_dict)[position_wanted]
+# Create a dictionary with keys of the dictionary the values of a list, and values of the dictionary empty lists
+dic = dict.fromkeys(list(list_with_names), [])
 
 # LISTS
 # Append a list in a for loop:
