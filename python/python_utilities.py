@@ -347,6 +347,16 @@ df.groupby(['ke1', 'key2'])['col_to_operate_aggregate'].agg('sum')
 # PLOT
 # The arguments for Seaborn work as well for Matplotlib.
 
+# SMOTE / UNBALANCED CLASSES
+from imblearn.over_sampling import SMOTE
+smote = SMOTE(ratio='minority')
+X_sm, y_sm = smote.fit_sample(X_trainmodels1, y_trainmodels1)
+rfmodels1.fit(X_sm, y_sm)
+y_predmodels1 = rfmodels1.predict(X_testmodels1)
+y_truemodels1 = y_testmodels1
+y_scoresmodels1 = rfmodels1.predict_proba(X_testmodels1)[:,1]
+accuracy_score(y_testmodels1, y_predmodels1)
+
 # COMPLETE EXAMPLE
 import matplotlib.ticker as ticker
 #------Graph Size------
