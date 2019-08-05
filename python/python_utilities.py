@@ -1,3 +1,6 @@
+# DELETE VARIABLES / CLEAR WORKSPACE / CLEAR WORK SPACE 
+%reset
+
 # LOAD EXTERNAL JUPYTER NOTEBOOK IN A CELL
 %run name_of_notebook.ipynb
 %run ./name_of_notebook.ipynb # Other way of doing the same
