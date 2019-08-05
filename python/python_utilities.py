@@ -1,3 +1,16 @@
+#CABECERA DE SCRIPTS / HEAD DE SCRIPTS /
+############################################################################
+# Título: XXX
+# Fecha: XX de nombre_mes de XXXX
+# Tratamiento: Train ó Tes
+# Tipo de datos: XX
+############################################################################
+
+#SEPARADOR DE TROZOS DE CÓDIGO
+############################################################################
+                    # NOMBRE_DE_LA_PARTE
+############################################################################
+
 # DELETE VARIABLES / CLEAR WORKSPACE / CLEAR WORK SPACE 
 %reset
 
