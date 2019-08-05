@@ -311,7 +311,14 @@ df.columns = df.columns.str.replace(' +$', '_')
 df.columns = df.columns.str.replace('^ +| +$', '_')
 
 # DUMMIES / ONE-HOT ENCODING / ONE HOT ENCODING / BINARIZING DATA
-df = pd.get_dummies(df, drop_first = False)
+df = pd.get_dummies(df, drop_first = True)
+# another form of doing it:
+values = df.values # Convert rows of df in elements of an array
+encoder = LabelEncoder() # Create an object of the LabelEncoder() function
+values[:,4] = encoder.fit_transform(values[:,4]) # Convert the 4th column to numeric (starting from 0, so it would be the 5th: 0, 1, 2, 3, 4).
+values = values.astype('float32') # We ensure all the data is float after conversion
+scaler = MinMaxScaler(feature_range=(0, 1)) # Normalize features with a MinMaxScaler object
+scaled = scaler.fit_transform(values) # Apply normalization to our data
 
 # DATE / DATETIME / TIMESTAMP
 # Convert String to Date Time / String -> Datetime / Change a string type: 20180931
