@@ -283,6 +283,34 @@ print(result)
 # For Data Frames:
 object_saved = pd.read_pickle('name_of_file_saved.pickle')
 
+# SAVE PYTHON SESSION / SAVE WORKSPACE / SAVE WORK SPACE / PYTHON .RDATA
+# Import the needed library "shelve"
+import shelve
+# Declare the constants (for example directory route where we are saving the session file):
+filename='C:/ANIBAL/PROJECTS/3_CLTV/Processing%20CLTV/output'
+# Execute all following lines in one chunk to save all objects:
+my_shelf = shelve.open(filename,'n') # 'n' for new
+for key in dir():
+    try:
+        my_shelf[key] = globals()[key]
+    except:
+        #
+        # __builtins__, my_shelf, and imported modules can not be shelved.
+        #
+        print('ERROR shelving: {0}'.format(key))
+my_shelf.close()
+
+# OPEN PYTHON SESSION / SAVE WORKSPACE / SAVE WORK SPACE / PYTHON .RDATA
+# Import the needed library "shelve"
+import shelve
+# Declare the constants (for example directory route where we are saving the session file):
+filename='C:/ANIBAL/PROJECTS/3_CLTV/Processing%20CLTV/output'
+# Execute all following lines in one chunk to open all objects:
+my_shelf = shelve.open(filename)
+for key in my_shelf:
+    globals()[key]=my_shelf[key]
+my_shelf.close()
+
 # CROSS VALIDATION / TRAIN - TEST SPLITTING / DIVIDE DATASET / SELECT TRAIN AND TEST
 train, test = train_test_split(df, test_size = perecntage_of_test_subset_in_decimal)
 
