@@ -1477,3 +1477,10 @@ def maxrows():
 # OBTAIN ALL TYPES OF COLUMN NAMES IN ALPHABETICAL ORDER
 def types(df):
     return(print(df.dtypes.sort_index()))
+
+def variables(df):
+    return((sorted(list(df))))
+
+def nmissings(df):
+    return(sum(df.isnull().sum()))
+    
