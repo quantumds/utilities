@@ -14,9 +14,12 @@
 # DELETE VARIABLES / CLEAR WORKSPACE / CLEAR WORK SPACE 
  %reset -f 
 
-# LOAD EXTERNAL JUPYTER NOTEBOOK IN A CELL
+# LOAD EXTERNAL JUPYTER NOTEBOOK IN A CELL / RUN JUPYTER NOTEBOOK INSIDE A NOTEBOOK
 %run name_of_notebook.ipynb
 %run ./name_of_notebook.ipynb # Other way of doing the same
+
+# RUN PYTHON SCRIPT INSIDE ANOTHER PYTHON SCRIPT
+exec(open("C:/ANIBAL/FORMATION/PERSONAL/2_autos_uciml/scripts/1_libraries_autos.py").read())
 
 # OBTAIN COLUMN TYPES IN ALPHABETICAL ORDER / PRINT COLUMN TYPES ALPHABETICALLY
 print(df.sort_index(axis=1).dtypes)
