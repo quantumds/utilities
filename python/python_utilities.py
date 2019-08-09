@@ -1205,7 +1205,8 @@ def freqcat(df):
   pd.options.display.max_rows = 10
   categories = list(df.select_dtypes(['category']))
   booleans = list(df.select_dtypes(['bool']))
-  concat = categories + booleans
+  objects = list(df.select_dtypes(['object']))
+  concat = categories + booleans + objects
   for col in concat:
     print(col, flush = True)  
     above_zero = df[col].value_counts()
@@ -1233,7 +1234,7 @@ def lfreqcat(df):
   categories = list(df.select_dtypes(['category']))
   booleans = list(df.select_dtypes(['bool']))
   objects = list(df.select_dtypes(['object']))
-  concat = categories + booleans
+  concat = categories + booleans + objects
   for col in concat:
     print(col, flush = True)
     above_zero = df[col].value_counts()
