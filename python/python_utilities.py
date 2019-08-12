@@ -123,7 +123,7 @@ non_predictive = ["NUM_EXPE_VALO",
                   "DATA_ALTA_REG"]
 data = data.drop(non_predictive, 1) 
 
-# READ DATA / READ TABLES / IMPORT DATA / READ CSV FILES / IMPORT CSV
+# READ DATA / READ TABLES / IMPORT DATA / READ CSV FILES / IMPORT CSV / LOAD DATA/ LOADING TABLES 
 # Import CSV:
 df = pd.read_csv(file_dir + file_name, sep = ',', header = 0, encoding = 'latin-1', low_memory = False, )
 # Other parameters:
