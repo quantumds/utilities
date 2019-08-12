@@ -357,6 +357,12 @@ df.columns = df.columns.str.replace(' +$', '_')
 # To replace white space at both ends:
 df.columns = df.columns.str.replace('^ +| +$', '_')
 
+# REGEX
+# Eliminate all blank spaces in column values before the beginning of the first letter and after the end of the last letter you see in the PC:
+df.column_desired = df.column_desired.str.strip()
+# Elimination of contiguous unnecesary blank spaces:
+df = df.applymap(lambda x: np.nan if isinstance(x, str) and (not x or x.isspace()) else x)
+
 # DUMMIES / ONE-HOT ENCODING / ONE HOT ENCODING / BINARIZING DATA
 df = pd.get_dummies(df, drop_first = True)
 # another form of doing it:
@@ -519,12 +525,6 @@ pd.options.display.max_columns = None
 # CROSS VALIDATION / TRAIN TEST SPLITTING / CROSS-VALIDATION / 
 labels = finaldf.SUCC
 X_train, X_test, y_train, y_test = train_test_split(finaldf, labels, test_size = 0.3)
-
-# REGEX
-# Eliminate all blank spaces before the beginning of the first letter and fter the end of the last letter you see in th PC:
-df.column_desired = df.column_desired.str.strip()
-# Elimination of contiguous unnecesry blank spaces:
-df = df.applymap(lambda x: np.nan if isinstance(x, str) and (not x or x.isspace()) else x)
 
 # RESET INDEX OF A DATAFRAME
 df.reset_index(drop = True, inplace = True)
