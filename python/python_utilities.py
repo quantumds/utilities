@@ -338,6 +338,8 @@ united_df.reset_index(drop = True, inplace = True)
 df.reset_index(drop = True, inplace = True)
 
 # COLUMN NAMES REPLACE STRINGS / SUBSTITUTE VALUES IN COLUMN NAMES / COLNAMES
+# Convert column names to lower case:
+df.columns = map(str.lower, df.columns)
 # Change points in column names for underscore (_):
 df.columns=df.columns.str.replace('.','_')
 # To remove white spaces everywhere for nothing:
