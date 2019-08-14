@@ -1505,4 +1505,133 @@ def variables(df):
 
 def nmissings(df):
     return(sum(df.isnull().sum()))
-    
+
+# AUTOS SAMPLE SCRIPT
+############################################################################
+# IMPORT OTHER SCRIPTS
+############################################################################
+exec(open("C:/ANIBAL/FORMATION/PERSONAL/2_autos_uciml/scripts/1_libraries_autos.py").read())
+exec(open("C:/ANIBAL/FORMATION/PERSONAL/2_autos_uciml/scripts/2_properties_autos.py").read())
+exec(open("C:/ANIBAL/FORMATION/PERSONAL/2_autos_uciml/scripts/3_functions_autos.py").read())
+exec(open("C:/ANIBAL/FORMATION/PERSONAL/2_autos_uciml/scripts/4_environ_autos.py").read())
+
+############################################################################
+# IMPORT DATA
+############################################################################
+# Import data table:
+df = pd.read_csv(file_dir + file_name, sep = ',', header = None, encoding = 'latin-1', low_memory = False)
+# Import column_names table:
+df_column_names = pd.read_csv(file_dir + file_name_cols, sep = ',', header = None, encoding = 'latin-1', low_memory = False)
+# Transpose column_names from 1st row to 1st column:
+df_column_names = df_column_names.transpose() 
+list_names = df_column_names[0].tolist()
+# Assign header:
+df.columns = list_names
+# We substitute hyphens for underscores in column names:
+df.columns = df.columns.str.replace('-', '_')
+
+############################################################################
+# FAST DATA QUALITY CHECK
+############################################################################
+df.isnull().sum()/len(df)*100 # The data set is completely clean
+
+############################################################################
+# FAST PRE-PROCESSING
+############################################################################
+# 1. Visual inspection
+print(df) # Or doing it with the GUI
+
+# 2. Drop duplicated rows:
+df = df.drop_duplicates(keep = 'first') # OK
+# 3. Drop rows with 70% missing values or more:
+df = df.dropna(thresh = round(len(df.columns) * (1-thresh_rows) , 0))
+
+# 4. Drop duplicated columns (equal to other columns in all its registry values):
+df = df.loc[:,~df.columns.duplicated()] # Only works for dataframes whose columns have equal names
+df = df.T.drop_duplicates().T # Memory SUPER intensive - It refers to the values
+# 5. Drop columns with 70% of missing values or more:
+df = df[df.columns[df.isnull().mean() < thresh_cols]] # OK
+# 6. Drop columns without variance:
+df = df.loc[:,df.apply(pd.Series.nunique) != 1] # Seems that this option is better coz´it also supports 'category' type
+
+# 7. Organize dataframe columns alphabetically:
+df = df.reindex(sorted(df.columns), axis=1)
+
+############################################################################
+# SECOND DATA QUALITY CHECK
+############################################################################
+df.isnull().sum()/len(df)*100 # The data set is completely clean
+
+############################################################################
+# ANALYZING FACTOR VARIABLES I: Changing Type of Variables
+############################################################################
+# 1. Correct variable type setting:
+df.dtypes
+freq(df)
+
+# Variables
+
+# To String:
+# aspiration -> string
+# body-style -> string
+# drive-wheels -> string
+# engine-location -> string
+# engine-type -> string
+# fuel-system -> string
+# fuel-type -> string
+# make -> string
+# num-of-cylinders -> string
+# num-of-doors -> string
+
+# To Float64:
+# bore -> float64
+# city-mpg -> float64
+# compression-ratio -> float64
+# curb-weight -> float64
+# engine-size -> float64
+# height -> float64
+# highway-mpg -> float64
+# horsepower -> float64
+# length -> float64
+# normalized-losses -> float64
+# peak-rpm -> float64
+# price -> float64
+# stroke -> float64
+# symboling -> float64
+# wheel-base -> float64
+# width -> float64
+
+# 1.2) To Numeric type:
+df = to_numeric(df)
+df.dtypes
+
+############################################################################
+# ANALYZING FACTOR VARIABLES II: Checking value-attribute correspondence
+############################################################################
+# Show all categorical attributes and its values:
+lfreqcat(df)
+# Recoding of variables
+# Replace missing values for "?":
+df.replace(to_replace = '?', value = np.nan, inplace = True)
+# Recoding of the response variable:
+df.loc[df.symboling > 0 , 'symboling'] = 1
+df.loc[df.symboling <= 0 , 'symboling'] = 0
+# Checking cardinality of categorical variables:
+numlevels(df) # OK
+# Checking correspondence of categorical variables and its values
+lfreqcat(df)
+
+############################################################################
+# ANALYZING FACTOR VARIABLES III: Eliminating/editing high cardinality factor variables (number of levels)
+############################################################################
+# List number of levels in each categorical variable:
+df.select_dtypes(['category']).apply(lambda x: len(set(x)))
+numlevels(df)
+# Everything is OK
+
+
+
+
+
+
+
