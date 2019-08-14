@@ -811,6 +811,11 @@ def to_numeric(df):
   df[to_num] = df[to_num].apply(pd.to_numeric, errors='coerce')
   return df
 
+# Convert strings to date: # The date format is: "%Y-%m-%d"
+def to_date(df, format_string):
+    df[to_dt] = df[to_dt].apply(pd.to_datetime, format=format_string)
+    return df
+  
 # Convert dates in format %b-%Y to numeric: 
 def date_to_numeric(df):
   for col in dates:
