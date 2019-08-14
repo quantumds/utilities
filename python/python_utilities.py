@@ -32,6 +32,25 @@ pd.options.display.max_rows = None
 # SHOW COMPLETE TABLE / SHOW ALL COLUMNS / VIEW ALL COLUMNS
 pd.options.display.max_columns = None 
 
+# ASSIGNMENT TO A COLUMN DEPENDING ON VALUES OF OTHER COLUMN / CONDITIONAL ASIGNMENT TO A COLUMN
+    conditions = [
+            (testdf['LEVEL_L1 Small Size Projects'] == 0) & (testdf['LEVEL_L2 Medium Size Projects'] == 0) & (testdf['LEVEL_L3 Large Size Projects'] == 0) & (testdf['LEVEL_L3+ Very Large Size Projects'] == 0), 
+            (testdf['LEVEL_L1 Small Size Projects'] == 1),
+            (testdf['LEVEL_L2 Medium Size Projects'] == 1) & (testdf['TOTAL_VALUE_KEURO'] < 2000),
+            (testdf['LEVEL_L2 Medium Size Projects'] == 1) & (testdf['TOTAL_VALUE_KEURO'] >= 2000),
+            (testdf['LEVEL_L3 Large Size Projects'] == 1),
+            (testdf['LEVEL_L3+ Very Large Size Projects'] == 1)
+            ]
+    choices = [
+            testdf['TOTAL_VALUE_KEURO'] * 0,
+            testdf['TOTAL_VALUE_KEURO'] * 0.015,
+            testdf['TOTAL_VALUE_KEURO'] * 0.01,
+            testdf['TOTAL_VALUE_KEURO'] * 0.005,
+            testdf['TOTAL_VALUE_KEURO'] * 0.005,
+            testdf['TOTAL_VALUE_KEURO'] * 0.005            
+            ]
+    testdf['BUDGET_COST'] = np.select(conditions, choices, default = 0)
+    
 # DTYPES ALPHABETICAL / PRINT DATAFRAME WITH COLUMNS IN ALPHABETICAL ORDER / VIEW DATAFRAME WITH COLUMNS ORDERED ALPHABETICALLY / ORDER COLUMNS OF DATA FRAME ALPHABETICALLY
 df.sort_index(axis=1, inplace=True)
 
