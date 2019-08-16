@@ -1639,5 +1639,7 @@ numlevels(df)
 # CENTERING TEXT IN MARKDOWN / CENTER TEXT 
 <p style="text-align: center;">Centered text</p>
 
-
+# ADD PHOTOS / IMAGES / JPG / JPEG / IN MARKDOWN OR JUPYTER NOTEBOOK
+from IPython.display import Image
+Image(filename="C:/ANIBAL/FORMATION/PERSONAL/feature_engineering_for_machine_learning/name_of_file.PNG")
 
