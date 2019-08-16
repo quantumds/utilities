@@ -1636,8 +1636,8 @@ numlevels(df)
 %run name_of_notebook.ipynb
 %run ./name_of_notebook.ipynb # Other way of doing the same
 
-
-
+# CENTERING TEXT IN MARKDOWN / CENTER TEXT 
+<p style="text-align: center;">Centered text</p>
 
 
 
