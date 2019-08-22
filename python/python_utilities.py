@@ -14,6 +14,11 @@
 # DELETE VARIABLES / CLEAR WORKSPACE / CLEAR WORK SPACE 
  %reset -f 
 
+# NP.NAN USE
+# You don't use np.nan when you want to select missing data, you use:
+df.column_name.isnull() # This create a conditional boolean vector to put in the rows position and select data that satisfy true
+df.column_name.notnull() # This create a conditional boolean vector to put in the rows position and select data that satisfy true
+
 # OBTAIN LEVELS OR VALUES OF A STRING OR OBJECT OR CATEGORICAL VARIABLE
 df.column_name.unique()
 
