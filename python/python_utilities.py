@@ -51,6 +51,14 @@ pd.options.display.max_columns = None
 # DTYPES ALPHABETICAL / PRINT DATAFRAME WITH COLUMNS IN ALPHABETICAL ORDER / VIEW DATAFRAME WITH COLUMNS ORDERED ALPHABETICALLY / ORDER COLUMNS OF DATA FRAME ALPHABETICALLY
 df.sort_index(axis=1, inplace=True)
 
+# FREQUENCY TABLES
+def freqt(var):
+    return print(var.value_counts(dropna = False))
+
+# PERCENTAGE OF MISSINGS
+def percmiss(df):
+  return (df.isnull().sum()*100)/len(df)
+
 # CHANGE COLOR OF JUPYTER CELLS
 # <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
 <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
