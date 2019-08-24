@@ -9,4 +9,8 @@ println(object_to_print)
 # TYPE OF AN OBJECT
 typeof(name_of_object)
 
-# DATA TYPE CASTING / DATA TYPE CONVERSION
+# CHANGE WORKING DIRECTORY
+cd("/Users/amsistac/Documents/ANIBAL/data_science/julia_projects/autos_uci_julia/data") # Mac systems
+
+# SEE / PRINT / VIEW CURRENT WORKING DIRECTORY
+pwd()
