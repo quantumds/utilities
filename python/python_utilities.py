@@ -443,7 +443,7 @@ df['name_of_column'] = df['name_of_column'].str.replace("string_pattern_to_be_re
 
 # GROUP BY
 # Group by and Sum
-df.groupby(['ke1', 'key2'])['col_to_operate_aggregate'].agg('sum')
+df.groupby(['ke1', 'key2'], as_index=False)['col_to_operate_aggregate'].agg('sum')
 
 # PLOT
 # The arguments for Seaborn work as well for Matplotlib.
