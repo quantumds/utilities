@@ -39,3 +39,9 @@ sum(colwise(x -> sum(ismissing.(x)), df))
 
 # DESCRIPTIVE SUMMARY / DESCRIPTIVE STATISTICS
 describe(df)
+
+# OPEN PREVIOUS SAVED CONFIGURATION
+Step 1: Shift+Super+P
+Step 2: Type: "save workspace open"
+Step 3: Click in the option of "Open"
+Step 4: Double click in julia_main.jl
