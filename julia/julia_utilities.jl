@@ -21,3 +21,13 @@ df_colnames = CSV.read(data_dir * raw_colnames_file_name, header = false)
 
 # CONVERT 1 ROW DATA FRAME TO STRING VECTOR
 list_colnames = vec(convert(Array, df_colnames[1, :])) # The 1st row contained the column names
+
+# ASSIGN AS COLUMN NAMES 1 ONE STRING VECTOR
+names!(df, Symbol.(list_colnames))
+
+# MISSINGS
+# Number of total missings in a Data Frame
+sum(colwise(x -> sum(ismissing.(x)), df))
+
+# DESCRIPTIVE SUMMARY / DESCRIPTIVE STATISTICS
+describe(df)
