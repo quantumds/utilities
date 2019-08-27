@@ -33,3 +33,8 @@ git status
 
 # CHANGE BRANCH
 git checkout name_of_new_branch
+
+# FORCE COMMIT WHEN IT PRESENTS WARNING RESULTS:
+git add .
+git commit -am "Pertinent update message"
+git push origin name_of_desired_branch --force
