@@ -2,6 +2,14 @@
 # Single quotes are reserved to characters.
 # Double quotes are reserved to strings.
 # Julia does not permit operators (+, -, *, ...), "methods" in Julia; that are not previously defined.
+# There is no way to clear the workspace in Julia. You need to restart the session
+# It seems that Symbol is string but we will confirm it soon
+
+# INSTALL PACKAGES
+Pkg.add("name_of_package")
+
+# LOAD LIBRARIES
+Use name_of_library
 
 # PRINT THROUGH THE SCREEN
 println(object_to_print)
