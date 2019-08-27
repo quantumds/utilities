@@ -112,7 +112,7 @@ os.listdir()
 # Stop a Jupyter Notebook in a specific cell after executing whole Notebook:
 raise
 
-# CREATION OF A MOCK DATAFRAME
+# CREATION OF A MOCK DATAFRAME / CREATION OF A NEW DATA FRAME / CREATE A NEW DATA FRAME
 # Option 1: 
 x = [1,1000,1001]
 y = [200,300,400]
