@@ -1,3 +1,21 @@
+    
+#CABECERA DE SCRIPTS / HEAD DE SCRIPTS /
+############################################################################
+# Título: XXX
+# Fecha: XX de nombre_mes de XXXX
+# Tratamiento: Train ó Tes
+# Tipo de datos: XX
+############################################################################
+
+#SEPARADOR DE TROZOS DE CÓDIGO
+############################################################################
+# ENVIRONMENT SETTINGS
+############################################################################
+
+############################################################################
+                    # NOMBRE_DE_LA_PARTE
+############################################################################
+
 # GENERAL KNOWLEDGE
 # Single quotes are reserved to characters.
 # Double quotes are reserved to strings.
@@ -6,6 +24,7 @@
 # It seems that Symbol is string but we will confirm it soon
 
 # INSTALL PACKAGES
+Using Pkg
 Pkg.add("name_of_package")
 
 # LOAD LIBRARIES
