@@ -24,6 +24,7 @@
 # It seems that Symbol is string but we will confirm it soon
 
 # INSTALL PACKAGES
+Pkg.update() # It is a good philosophy to update previous to a new installation to avoid problems.
 Using Pkg
 Pkg.add("name_of_package")
 
