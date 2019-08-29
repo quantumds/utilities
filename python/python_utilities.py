@@ -1,3 +1,6 @@
+# La negación en Python es ~ en vez de !
+# Siempre convertir todas las columnas a sus respectivos types. "Repasar" los types correctos. joblib y groupby lo requieren.
+
 #CABECERA DE SCRIPTS / HEAD DE SCRIPTS /
 ############################################################################
 # Título: XXX
