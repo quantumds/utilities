@@ -37,7 +37,8 @@ println(object_to_print)
 typeof(name_of_object)
 
 # CHANGE WORKING DIRECTORY
-cd("/Users/amsistac/Documents/ANIBAL/data_science/julia_projects/autos_uci_julia/data") # Mac systems
+cd("/Users/amsistac/Documents/ANIBAL/data_science/julia_projects/autos_uci_julia/data/") # Mac systems
+cd("\\Users\\amsistac\\Documents\\ANIBAL\\data_science\\julia_projects\\autos_uci_julia\\data\\") # Windows uses double backslashes \\
 
 # SEE / PRINT / VIEW CURRENT WORKING DIRECTORY
 pwd()
@@ -55,6 +56,13 @@ names!(df, Symbol.(list_colnames))
 # MISSINGS
 # Number of total missings in a Data Frame
 sum(colwise(x -> sum(ismissing.(x)), df))
+
+# PASTE A SRING
+string1 * string2 # operator "*" is like "paste" in Python or R 
+# Example
+string1 = "Hola. "
+string2 = "Cómo estás? "
+string1 * string2 # This will give result by console like: "Hola. Cómo estás?"
 
 # DESCRIPTIVE SUMMARY / DESCRIPTIVE STATISTICS
 describe(df)
