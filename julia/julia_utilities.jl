@@ -30,7 +30,7 @@ size(name_of_list)
 unique(name_of_list)
 
 # FUNCTIONS
-function name_of_function(parameter 1, parameter2, ..., parametern)
+function name_of_function(parameter 1, parameter2, ..., parametern) # No semicolons or colons, no 2 points, etc.
     operations...
 end
 
