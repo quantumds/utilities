@@ -29,7 +29,7 @@ using Pkg # "using" keyword must be always in lowerkeys
 Pkg.add("name_of_package")
 
 # LOAD LIBRARIES
-Use name_of_library
+using name_of_library
 
 # PRINT THROUGH THE SCREEN
 println(object_to_print)
