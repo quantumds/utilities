@@ -82,3 +82,11 @@ created_date_vals = [Date(2019,1,1), Date(2019,1,1), Date(2019,1,1), Date(2019,1
 
 # DATES
 Date(2019,12,31) # The format is year, Month, Day # Date is the simple format (no miliseconds). Datetime is the complex one
+
+# CREATE A NEW DATA FRAME / DATAFRAME
+# One example:
+df = DataFrame(a = 1:4, b = 1:4, c = randn(4), d = randn(4))
+# Another example:
+df = DataFrame(opportunity_number = op_num_vals,
+                            created_date = created_date_vals,
+                            review_date = rev_date_vals)
