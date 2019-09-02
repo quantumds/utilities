@@ -25,7 +25,7 @@
 
 # INSTALL PACKAGES
 Pkg.update() # It is a good philosophy to update previous to a new installation to avoid problems.
-Using Pkg
+using Pkg # "using" keyword must be always in lowerkeys
 Pkg.add("name_of_package")
 
 # LOAD LIBRARIES
