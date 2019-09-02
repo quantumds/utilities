@@ -73,3 +73,12 @@ Step 1: Shift+Super+P
 Step 2: Type: "save workspace open"
 Step 3: Click in the option of "Open"
 Step 4: Double click in julia_main.jl
+
+# CREATING NUMERICAL LISTS
+days_vals = [0, 0, 0, 0]
+
+# CREATING LISTS OF DATES
+created_date_vals = [Date(2019,1,1), Date(2019,1,1), Date(2019,1,1), Date(2019,1,1)]
+
+# DATES
+Date(2019,12,31) # The format is year, Month, Day # Date is the simple format (no miliseconds). Datetime is the complex one
