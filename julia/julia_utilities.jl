@@ -23,6 +23,19 @@
 # There is no way to clear the workspace in Julia. You need to restart the session
 # It seems that Symbol is string but we will confirm it soon
 
+# LENGTH OF A VECTOR OR LENGTH OF A LIST
+size(name_of_list)
+
+# FUNCTIONS
+function name_of_function(parameter 1, parameter2, ..., parametern)
+    operations...
+end
+
+# FOR LOOPS
+for x in list
+    operations...
+end
+
 # GENERATE A SEQUENCE
 collect(1:5) # Te sequence generated is: 1 2 3 4 5
 
