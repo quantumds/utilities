@@ -23,6 +23,9 @@
 # There is no way to clear the workspace in Julia. You need to restart the session
 # It seems that Symbol is string but we will confirm it soon
 
+# GENERATE A SEQUENCE
+collect(1:5) # Te sequence generated is: 1 2 3 4 5
+
 # INSTALL PACKAGES
 Pkg.update() # It is a good philosophy to update previous to a new installation to avoid problems.
 using Pkg # "using" keyword must be always in lowerkeys
@@ -77,6 +80,8 @@ Step 4: Double click in julia_main.jl
 # ACCESS TO A COLUMN
 df[:name_of_column] # 1st way
 df.name_of_column # 2nd way
+df[:, 5] # 5th column, all rows
+df[:, 5:8] # 5th to 8th column, all rows
 
 # CREATING NUMERICAL LISTS
 days_vals = [0, 0, 0, 0]
