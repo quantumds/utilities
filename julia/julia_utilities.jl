@@ -34,6 +34,9 @@ Pkg.add("name_of_package")
 # LOAD LIBRARIES
 using name_of_library
 
+# CREATE A SEQUENCE / GENERATE SEQUENCES
+collect(1:8)
+
 # PRINT THROUGH THE SCREEN
 println(object_to_print)
 
