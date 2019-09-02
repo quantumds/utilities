@@ -50,6 +50,10 @@ df[df[:number_of_cars] .== 7 , :]
 # GENERATE A SEQUENCE
 collect(1:5) # Te sequence generated is: 1 2 3 4 5
 
+# ORDER / SORT / DATA FRAME DEPENDING ON VALUES OF A COLUMN
+sort(df, :name_of_column) # Increasing order depending on the values of name_of_column
+sort(df, :name_of_column, rev=true) # Decreasing order depending on the values of name_of_column
+
 # INSTALL PACKAGES
 Pkg.update() # It is a good philosophy to update previous to a new installation to avoid problems.
 using Pkg # "using" keyword must be always in lowerkeys
