@@ -31,6 +31,9 @@ function name_of_function(parameter 1, parameter2, ..., parametern)
     operations...
 end
 
+# DIMENSION OF A DATA FRAME
+size(df)
+
 # FOR LOOPS
 for x in list
     operations...
