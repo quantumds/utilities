@@ -74,6 +74,10 @@ Step 2: Type: "save workspace open"
 Step 3: Click in the option of "Open"
 Step 4: Double click in julia_main.jl
 
+# ACCESS TO A COLUMN
+df[:name_of_column] # 1st way
+df.name_of_column # 2nd way
+
 # CREATING NUMERICAL LISTS
 days_vals = [0, 0, 0, 0]
 
