@@ -42,6 +42,10 @@ for x in list
     operations...
 end
 
+# FILTER A DATA FRAME 
+df[df[:review_date] .== Date(2019,1,4) , :] # The "equal operator" has a point in front
+df[df[:number_of_cars] .== 7 , :]
+
 # GENERATE A SEQUENCE
 collect(1:5) # Te sequence generated is: 1 2 3 4 5
 
