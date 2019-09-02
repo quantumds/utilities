@@ -26,6 +26,9 @@
 # LENGTH OF A VECTOR OR LENGTH OF A LIST
 size(name_of_list)
 
+# UNIQUE VALUES OF A LIST
+unique(name_of_list)
+
 # FUNCTIONS
 function name_of_function(parameter 1, parameter2, ..., parametern)
     operations...
