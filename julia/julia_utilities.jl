@@ -102,9 +102,11 @@ string1 * string2 # This will give result by console like: "Hola. Cómo estás?"
 # DESCRIPTIVE SUMMARY / DESCRIPTIVE STATISTICS
 describe(df)
 
-# APPEND ROWS TO A DATA FRAME
-# The row should be a data frame
+# APPEND ROWS TO A DATA FRAME / ADD ROWS TO A DATA FRAME
+# The row should be a data frame; and in this case, if df2 is the row to append, df1 should not be empty
 append!(df1, df2)
+# This option works with feeding empty data frames:
+push!(df1, df2[ number_of_line , :])
 # For example:
 df1 = DataFrame(A = 1:4, B = ["M", "F", "F", "M"])
 df2 = DataFrame(A = 6, B = ["F"])
