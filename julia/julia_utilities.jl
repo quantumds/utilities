@@ -102,6 +102,13 @@ string1 * string2 # This will give result by console like: "Hola. Cómo estás?"
 # DESCRIPTIVE SUMMARY / DESCRIPTIVE STATISTICS
 describe(df)
 
+# APPEND ROWS TO A DATA FRAME
+# The row should be a data frame
+append!(df1, df2)
+# For example:
+df1 = DataFrame(A = 1:4, B = ["M", "F", "F", "M"])
+df2 = DataFrame(A = 6, B = ["F"])
+
 # OPEN PREVIOUS SAVED CONFIGURATION
 Step 1: Shift+Super+P
 Step 2: Type: "save workspace open"
