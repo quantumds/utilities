@@ -139,3 +139,23 @@ df = DataFrame(a = 1:4, b = 1:4, c = randn(4), d = randn(4))
 df = DataFrame(opportunity_number = op_num_vals,
                             created_date = created_date_vals,
                             review_date = rev_date_vals)
+
+# MEASURE TIME OF A PROCEDURE IN JULIA
+# Import Libraries:
+using Distributed # Import required library
+addprocs(4) # Work with 4 processors
+
+# Measure time with a simple loop:
+@time begin # Keyword to note that we are measuring from here
+  for N in 1:10000
+    println("The N of this iteration in $N")
+  end
+end # Keyword to say that we end measuring time
+
+# Measure the time with a simple function:
+function printings(num) # We create first the function
+    for N in 1:num
+        println("The N of this iteration in $N")
+    end
+end
+@time printings(5000) # We call the execution of the function and measurement of time simply putting "@time" before
