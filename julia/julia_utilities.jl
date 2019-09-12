@@ -26,6 +26,9 @@
 # LENGTH OF A VECTOR OR LENGTH OF A LIST
 size(name_of_list)
 
+# WATCH COMPLETE DATA FRAME / SEE WHOLE DATA FRAME / 
+showall(df)
+
 # UNIQUE VALUES OF A LIST
 unique(name_of_list)
 
