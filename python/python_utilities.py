@@ -41,6 +41,13 @@ print(df.sort_index(axis=1).dtypes)
 df.dtypes.sort_index()
 df.sort_index(axis=1).dtypes # Does the same
 
+# MEASURE TIME IN A PYTHON PROCEDURE
+import time
+start = time.time()
+-all the procedure you want to do in python-
+end = time.time()
+print("Time taken was {} seconds").format(end - start)
+
 # SHOW COMPLETE SIZE OF LIST / LIST SIZE / INCREASE LIST SIZE
 pd.options.display.max_rows = None
 
