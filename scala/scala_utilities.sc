@@ -31,3 +31,6 @@ df.select("column_1", "column_2")
 
 // FILTER
 df.filter(df("column_to_filter") > reference_value).select("column_1", "column_2")
+
+// CHANGE WORKING DIRECTORIES
+// Change working directories is not suggested in scala. It is not a good practice.
