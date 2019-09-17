@@ -16,6 +16,9 @@ val df_2 = spark.read.option("header", true).csv("/1_spark_for_data_analysis_in_
 // OBTAIN WORKING DIRECTORY:
 System.getProperty("user.dir")
 
+// CHANGE WORKING DIRECTORY
+// Change working directory is not a good practice. It is not suggested.
+
 // TYPES OF A DATAFRAME
 df_2.dtypes
 
