@@ -1,2 +1,2 @@
 # utilities
-Python and R utilities scripts.
+Python, Scala, Julia, SQL, and R utilities scripts.
