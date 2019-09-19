@@ -15,3 +15,11 @@
 ## Text (Smaller)
 ### Text (More smaller)
 #### Text (Even more smaller)
+
+# ADD COLORS
+<font color = "red"> text you want to place </font>
+
+# CENTERING TEXT
+<center> text you whant to center </center>
+<h1><center>Centered text!</center></h1> # With big subtitles
+<h3><center>Centered text!</center></h3> # With small subtitles
