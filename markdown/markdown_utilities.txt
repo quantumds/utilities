@@ -23,3 +23,7 @@
 <center> text you whant to center </center>
 <h1><center>Centered text!</center></h1> # With big subtitles
 <h3><center>Centered text!</center></h3> # With small subtitles
+
+# INSERT IMAGE PNG JPEG FILE IN NOTEBOOK
+from IPython.display import Image
+Image(filename="/Users/amsistac/Documents/ANIBAL/data_science/formation/coursera/how_to_win_a_data_science_competition/images/trees_explanation.PNG")
