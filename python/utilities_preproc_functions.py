@@ -339,7 +339,7 @@ object_saved = pd.read_pickle('name_of_file_saved.pickle')
 # Import the needed library "shelve"
 import shelve
 # Declare the constants (for example directory route where we are saving the session file):
-filename='C:/ANIBAL/PROJECTS/3_CLTV/Processing%20CLTV/output'
+filename='C:/ANIBAL/PROJECTS/3_CLTV/Processing%20CLTV/output/session_saved.dat'
 # Execute all following lines in one chunk to save all objects:
 my_shelf = shelve.open(filename,'n') # 'n' for new
 for key in dir():
@@ -356,7 +356,7 @@ my_shelf.close()
 # Import the needed library "shelve"
 import shelve
 # Declare the constants (for example directory route where we are saving the session file):
-filename='C:/ANIBAL/PROJECTS/3_CLTV/Processing%20CLTV/output'
+filename='C:/ANIBAL/PROJECTS/3_CLTV/Processing%20CLTV/output/session_saved.dat'
 # Execute all following lines in one chunk to open all objects:
 my_shelf = shelve.open(filename)
 for key in my_shelf:
