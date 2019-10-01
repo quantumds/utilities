@@ -1,21 +1,19 @@
-# La negación en Python es ~ en vez de !
-# Siempre convertir todas las columnas a sus respectivos types. "Repasar" los types correctos. joblib y groupby lo requieren.
+# Negation in Python is: ~ instead of: !
+# We must always convert all columns with its respective types. "Repass" the correct types. joblib y groupby require it.
 
-#CABECERA DE SCRIPTS / HEAD DE SCRIPTS /
+# HEAD OF SCRIPTS /
 ############################################################################
-# Título: XXX
-# Fecha: XX de nombre_mes de XXXX
-# Tratamiento: Train ó Tes
-# Tipo de datos: XX
+# Title: XXX
+# Date: XX de nombre_mes de XXXX
 ############################################################################
 
-#SEPARADOR DE TROZOS DE CÓDIGO
+# SEPARATOR OF CHUNK OF CODES
 ############################################################################
-# ENVIRONMENT SETTINGS
+# NAME OF A PART
 ############################################################################
 
 ############################################################################
-                    # NOMBRE_DE_LA_PARTE
+                         # NAME OF A PART
 ############################################################################
 
 # DELETE VARIABLES / CLEAR WORKSPACE / CLEAR WORK SPACE 
