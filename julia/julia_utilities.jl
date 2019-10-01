@@ -1,19 +1,17 @@
     
-#CABECERA DE SCRIPTS / HEAD DE SCRIPTS /
+# HEAD OF SCRIPTS 
 ############################################################################
-# Título: XXX
-# Fecha: XX de nombre_mes de XXXX
-# Tratamiento: Train ó Tes
-# Tipo de datos: XX
+# Title: XXX
+# Date: XX de nombre_mes de XXXX
 ############################################################################
 
-#SEPARADOR DE TROZOS DE CÓDIGO
+# CHUNK OF CODE SEPARATOR
 ############################################################################
 # ENVIRONMENT SETTINGS
 ############################################################################
 
 ############################################################################
-                    # NOMBRE_DE_LA_PARTE
+                    # NAME OF PART
 ############################################################################
 
 # GENERAL KNOWLEDGE
