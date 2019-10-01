@@ -45,6 +45,9 @@ for x in list
     operations...
 end
 
+# IMPORT JULIA SCRIPT OR JULIA FILE FROM OTHER DIRECTORY
+include("path_to_julia_file/name_of_julia_file.jl")
+
 # FILTER A DATA FRAME 
 # You cannot use simply the boolean expression alone, you must end indicating all the columns with: " , :" at the end.
 df[df[:review_date] .== Date(2019,1,4) , :] # The "equal operator" has a point in front
