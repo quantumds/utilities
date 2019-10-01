@@ -83,8 +83,8 @@ cd("\\Users\\amsistac\\Documents\\ANIBAL\\data_science\\julia_projects\\autos_uc
 pwd()
 
 # READ DATA / READ CSV / READ TABLE / READ DATA FRAME
-df_values = CSV.read(data_dir * raw_file_name, header = false)
-df_colnames = CSV.read(data_dir * raw_colnames_file_name, header = false)
+df_values = CSV.read(data_dir * raw_file_name, header = false, delim = "|")
+df_colnames = CSV.read(data_dir * raw_colnames_file_name, header = false, delim = ",")
 
 # CONVERT 1 ROW DATA FRAME TO STRING VECTOR
 list_colnames = vec(convert(Array, df_colnames[1, :])) # The 1st row contained the column names
