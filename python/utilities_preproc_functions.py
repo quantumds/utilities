@@ -4,7 +4,7 @@
 # HEAD OF SCRIPTS /
 ############################################################################
 # Title: XXX
-# Date: XX de nombre_mes de XXXX
+# Date: XX of name_of_month of XXXX
 ############################################################################
 
 # SEPARATOR OF CHUNK OF CODES
