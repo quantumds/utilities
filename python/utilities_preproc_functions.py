@@ -324,6 +324,11 @@ import pickle
 pickle.dump(name_of_object_to_save, open('route/desired_name_of_file.pickle', 'wb'))
 # Method useful for pandas dataframes:
 df.to_pickle('name_of_file_saved.pickle')  # where to save it, usually as a .pkl
+# Way of saving several objects as pickle file:
+tuple_of_objects = (object1, object2, object3, object4)
+filename = "C:/ANIBAL/PROJECTS/3_CLTV/Processing%20CLTV/output/best_model.pickle"  # A specific route inside your computer
+with open(filename, 'wb') as f:
+    pickle.dump(tuple_of_objects, f)
 
 # LOAD PICKLE FILE
 # Load model:
@@ -332,7 +337,11 @@ result = loaded_model.score(X_test, Y_test) *# for example, to obtain prediction
 print(result)
 # For Data Frames:
 object_saved = pd.read_pickle('name_of_file_saved.pickle')
-
+# Way of loading several different objects:
+filename = "C:/ANIBAL/PROJECTS/3_CLTV/Processing%20CLTV/output/best_model.pickle"  # A specific route inside your computer
+with open(filename, "rb") as f:
+    saved_objects = pickle.load(f)
+    
 # SAVE PYTHON SESSION / SAVE WORKSPACE / SAVE WORK SPACE / PYTHON .RDATA
 # Import the needed library "shelve"
 import shelve
