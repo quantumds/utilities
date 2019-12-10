@@ -82,6 +82,21 @@ def freqt(var):
 def percmiss(df):
   return (df.isnull().sum()*100)/len(df)
 
+# ASSIGNATION DEPENDING ON VALUES OF OTHER DATA FRAME / MAP
+dictionary_with_new_values = dict({
+    'old_value1': 1,
+    'old_value2': 2,
+    'old_value3': 3,
+    'old_value4': 4
+})
+df.replace({"column_to_replace_values": dictionary_with_new_values})
+# Other way of doing it:
+df.column_to_replace_values = df.column_to_replace_values.map(dictionary_with_new_values)
+# REMEMBER THAT THE NEW VALUES SHOULD BE OF THE SAME TYPE AS THE PREVIOUS COLUMN!!!
+# IF NOT, YOU SHOULD CREATE A NEW COLUMN
+# If the values that we should map are in 2 columns of a 3rd or other data frame. It should be with:
+df1['column_to_change'] = df1['column_to_change'].map(df_mapping.set_index('column_with_same_name_as_column_to_change')['column_with_new_values'])
+
 # CHANGE COLOR OF JUPYTER CELLS
 # <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
 <font color = "blue"> 7. Assessment of Quality of the Missing Exclussion: <font>
