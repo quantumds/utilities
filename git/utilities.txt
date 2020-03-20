@@ -38,3 +38,16 @@ git checkout name_of_new_branch
 git add .
 git commit -am "Pertinent update message"
 git push origin name_of_desired_branch --force
+
+# PULL REQUEST / MERGE PULL REQUEST
+->
+# switch to the branch that has asked for the pull request -the originator- in your local pc
+# test changes with description of the creator of the pull request
+# check if it is valid or not depending on execution result
+# if it is incompleted reply to creator with feedback, if it is completed without problems then:
+# approve pull request in explorer
+# merge in explorer
+->
+# switch to your branch (the one that has not created the pull request)
+git pull origin develop
+git push
