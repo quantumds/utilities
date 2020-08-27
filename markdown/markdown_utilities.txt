@@ -28,5 +28,7 @@
 from IPython.display import Image
 Image(filename="/Users/amsistac/Documents/ANIBAL/data_science/formation/coursera/how_to_win_a_data_science_competition/images/trees_explanation.PNG")
 
-# CONVERT WORD IN HYPERLINK:
-[&lt;Windows 10&gt;](https://github.com/quantumblacklabs/causalnex/issues/33)
+# CONVERT PHRASE IN HYPERLINK:
+[&lt;phrase_to_convert_in_hyperlink&gt;](your_link)
+Example:
+[&lt;phrase_to_convert_in_hyperlink&gt;](https://github.com/quantumblacklabs/causalnex/issues/33)
