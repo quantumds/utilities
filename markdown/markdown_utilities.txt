@@ -27,3 +27,6 @@
 # INSERT IMAGE PNG JPEG FILE IN NOTEBOOK
 from IPython.display import Image
 Image(filename="/Users/amsistac/Documents/ANIBAL/data_science/formation/coursera/how_to_win_a_data_science_competition/images/trees_explanation.PNG")
+
+# CONVERT WORD IN HYPERLINK:
+[&lt;Windows 10&gt;](https://github.com/quantumblacklabs/causalnex/issues/33)
