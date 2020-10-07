@@ -1687,6 +1687,18 @@ df.select_dtypes(['category']).apply(lambda x: len(set(x)))
 numlevels(df)
 # Everything is OK
 
+# YAML FILES IMPORT
+import yaml
+# DEFINE ROOT FOLDER:
+root_folder = Path(__file__).parents[2]
+# IMPORT YAML FILE:
+yaml_rel_route = "src/properties/properties.yaml"
+with open(os.path.join(Path(root_folder), Path(yaml_rel_route))) as f:
+    properties = yaml.load(f, Loader=yaml.BaseLoader)
+filename = os.path.join(root_folder, properties['directories_routes']['output_models'],
+                        properties['model_instances']['rf_naive_win_lost_min_preproc_c_a_l_all_train_objects'])
+properties[directories_routes']['complete_path_to_model'] # Example of accessing a YAML item
+
 ###################################################### JUPYTER NOTEBOOK ################################################################
 # LOAD EXTERNAL JUPYTER NOTEBOOK IN A CELL / RUN JUPYTER NOTEBOOK INSIDE A NOTEBOOK
 %run name_of_notebook.ipynb
