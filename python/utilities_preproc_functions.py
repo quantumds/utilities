@@ -476,6 +476,7 @@ df['name_of_column'] = df['name_of_column'].str.replace("string_pattern_to_be_re
 # GROUP BY
 # Group by and Sum
 df.groupby(['ke1', 'key2'], as_index=False)['col_to_operate_aggregate'].agg('sum')
+df.sort_values(['column_that_we_want_the_last']).groupby('column_identifier', as_index=False).last()
 
 # PLOT
 # The arguments for Seaborn work as well for Matplotlib.
