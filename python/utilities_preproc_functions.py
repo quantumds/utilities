@@ -216,7 +216,7 @@ df = pd.read_excel('name_of_file.xlsx', converters={'column_1': np.int32, 'colum
 df = pd.merge(df1, df2, on = ['variable_1', 'variable_2'], how = 'inner')
 # how can be changed to 'outer', 'left' or right
 
-# DATA TYPE CONVERSION / CHANGE DATA TYPE / CONVERT DATA TYPE
+# DATA TYPE CONVERSION / CHANGE DATA TYPE / CONVERT DATA TYPE / DATA TYPE CASTING
 # Data Type Conversions:
 # -> String:
 df['id']= df['id'].astype('str')
