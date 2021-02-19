@@ -528,6 +528,8 @@ dayly_mean.plot(ax=ax, color='b', label = 'Time Series of Inventory Levels on Da
 monthly_mean.plot(ax=ax, color='r', label = 'Time Series of Inventory Levels on Monthly Data')
 # Add legend ('bbox_to_anchor' is the position of the legend; 'size' is size of letters in legend)
 plt.legend(bbox_to_anchor = (0.02, 0.97), loc=2, borderaxespad=0., prop={'size': 20})
+# Rotate x axis / Rotate 90 degrees x axis / Vertical axis labels:
+plt.set_xticklabels(df.index, rotation=90)
 
 # SEABORN
 # Histogram without density
