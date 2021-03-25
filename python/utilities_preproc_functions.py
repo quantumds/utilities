@@ -227,12 +227,12 @@ df = df.astype(str)
 # -> Category:
 plms[to_cat] = plms[to_cat].apply(lambda x: x.astype('category'))
 df[df.select_dtypes(['object']).columns] = df.select_dtypes(['object']).apply(lambda x: x.astype('category'))
-# -> Numeric:
+# -> NUMERIC:
 df['column_to_numeric'] = pd.to_numeric(df.column_to_numeric, errors = 'coerce')
-# -> Integer
-df['column_to_int'].astype(np.int64)
 # Convert all columns to numeric type:
 df = df.apply(pd.to_numeric, errors='coerce')
+# -> Integer
+df['column_to_int'].astype(np.int64)
 
 # MISSINGS / DATA QUALITY ASSESSMENT / DATA QUALITY
 # Count number of missings in entire dataframe:
