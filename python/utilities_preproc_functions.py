@@ -16,6 +16,12 @@
                          # NAME OF A PART
 ############################################################################
 
+# SEE ALL COLUMNS:
+pd.options.display.max_columns = None
+
+# SEE ALL ROWS:
+pd.options.display.max_rows = None
+
 # DELETE VARIABLES / CLEAR WORKSPACE / CLEAR WORK SPACE 
  %reset -f 
 
