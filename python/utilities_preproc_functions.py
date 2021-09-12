@@ -45,6 +45,12 @@ print(df.sort_index(axis=1).dtypes)
 df.dtypes.sort_index()
 df.sort_index(axis=1).dtypes # Does the same
 
+# OPEN JUPYTER NOTEBOOK FROM CMD OR COMMAND LINE
+# 1. Go to windows explorer destination where your head directory of the project is
+# 2. Erase what appears on the horizontal bar of the location route at the top, and write "cmd" without quotation marks, then press enter.
+# 3. Write "python -m notebook" without quotation marks in the terminal, and then press enter.
+python -m notebook
+
 # MEASURE TIME IN A PYTHON PROCEDURE
 import time
 start = time.time()
