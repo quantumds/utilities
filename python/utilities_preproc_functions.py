@@ -1706,7 +1706,7 @@ numlevels(df)
 # Everything is OK
 
 # YAML FILES IMPORT
-import yaml
+import yaml # Requires PyYAML installation
 # DEFINE ROOT FOLDER:
 root_folder = Path(__file__).parents[2]
 # IMPORT YAML FILE:
