@@ -1342,14 +1342,14 @@ def lfreqcat(df):
   return print('')
 
 # Convert to factors:
-def to_category(df):
-  df[to_cat] = df[to_cat].apply(lambda x: x.astype('category'))
-  return df
+def to_string(df, to_str):
+    df[to_str] = df[to_str].apply(lambda x: x.astype('category'))
+    return df
 
 # Convert to numeric: 
-def to_numeric(df):
-  df[to_num] = df[to_num].apply(pd.to_numeric, errors='coerce')
-  return df
+def to_numeric(df, to_num):
+    df[to_num] = df[to_num].apply(pd.to_numeric, errors='coerce')
+    return df
 
 # Convert dates in format %b-%Y to numeric: 
 def date_to_numeric(df):
