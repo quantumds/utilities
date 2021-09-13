@@ -1708,7 +1708,7 @@ numlevels(df)
 # YAML FILES IMPORT
 import yaml # Requires PyYAML installation
 # DEFINE ROOT FOLDER:
-root_folder = Path(__file__).parents[2]
+root_folder = Path(__file__).parents[2] #  Requires: from pathlib import Path
 # IMPORT YAML FILE:
 yaml_rel_route = "src/properties/properties.yaml"
 with open(os.path.join(Path(root_folder), Path(yaml_rel_route))) as f:
