@@ -328,6 +328,8 @@ df.select_dtypes(include=['integer'])
 df.select_dtypes(include=['object'])
 # Select categorical Data:
 df.select_dtypes(include=['category'])
+# Select datetime / date:
+df.select_dtypes(include=['datetime64'])
 
 # SELECT / FILTER DATA / FILTER A DATASET / FILTER DATAFRAME / EXCLUDE / NOT SELECT / ASSIGNATION / ASSIGN
 # Index numeric, column by name:
