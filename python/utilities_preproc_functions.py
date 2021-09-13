@@ -91,8 +91,8 @@ def freqt(var):
     return print(var.value_counts(dropna = False))
 
 # PERCENTAGE OF MISSINGS
-def percmiss(df):
-  return (df.isnull().sum()*100)/len(df)
+def pmiss(df):
+    return df.isnull().sum() * 100 / len(df)
 
 # ASSIGNATION DEPENDING ON VALUES OF OTHER DATA FRAME / MAP
 dictionary_with_new_values = dict({
