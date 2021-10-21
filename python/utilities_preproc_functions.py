@@ -103,7 +103,7 @@ dictionary_with_new_values = dict({
 })
 df.replace({"column_to_replace_values": dictionary_with_new_values})
 # Other way of doing it:
-df.column_to_replace_values = df.column_to_replace_values.map(dictionary_with_new_values)
+df_currencies['Month'] = df_currencies['Month'].map(month_dict)
 # REMEMBER THAT THE NEW VALUES SHOULD BE OF THE SAME TYPE AS THE PREVIOUS COLUMN!!!
 # IF NOT, YOU SHOULD CREATE A NEW COLUMN
 # If the values that we should map are in 2 columns of a 3rd or other data frame. It should be with:
