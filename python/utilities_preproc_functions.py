@@ -171,6 +171,8 @@ df.loc[df['column_name_to_filter'].isin(reference_values_of_a_column_in_other_df
 
 # FREQUENCY TABLES
 plms['isfiller'].value_counts()
+import collections, numpy
+collections.Counter(numpy_array) # Being numpy_array a Numpy array
 
 # DATA QUALITY FUNCTIONS
 # 1. Completeness
