@@ -130,6 +130,10 @@ conda install name_of_package
 # If not available from current channel:
 conda install -c conda-forge name_of_package
 
+# READ SEVERAL FILES IN AN ADRESS
+path = r"/Users/anibalmartinez-sistac/Documents/anibal/master_ai/descubrimiento_de_informacion_en_textos/desc_info_textos_tarea_2/data/fc2/" # SPECIFY YOUR PATH
+files = [file for file in os.listdir(path) if not file.startswith('.')]
+
 # SET GLOBAL WARNINGS IN PYTHON OFF / JUPYTER NOTEBOOK
 import warnings
 warnings.filterwarnings('ignore')
