@@ -51,3 +51,6 @@ git push origin name_of_desired_branch --force
 # switch to your branch (the one that has not created the pull request)
 git pull origin develop
 git push
+
+# CREATE A BRANCH BASED ON ANOTHER BRANCH
+git checkout -b myfeature dev
