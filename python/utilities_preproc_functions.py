@@ -16,6 +16,9 @@
                          # NAME OF A PART
 ############################################################################
 
+# XLRD:
+# xlrd should be version 1.2.0 when installing with pip command.
+
 # SEE ALL COLUMNS:
 pd.options.display.max_columns = None
 
