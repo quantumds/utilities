@@ -16,6 +16,9 @@
                          # NAME OF A PART
 ############################################################################
 
+# FIND COLUMN NAMES THAT CONTAIN SPECIFIC STRING
+[col for col in df.columns if '_y' in col]. # Searching for column names with "_x" in name (as if they were duplicated).
+
 # XLRD:
 # xlrd should be version 1.2.0 when installing with pip command.
 
