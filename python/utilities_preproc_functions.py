@@ -42,7 +42,10 @@ df.column_name.unique()
 # OBTAIN LEVELS FROM CATEGORICAL / OBJECT / STRING VARIABLE:
 def levels(var):
   return sorted([x for x in list(var.unique()) if str(x) != 'nan'])
-  
+
+# DROP INFINITE VALUES - REPLACE INFINITE BY MISSINGS - INFINITY 
+df.replace([np.inf, -np.inf], np.nan, inplace=True)
+
 # RUN PYTHON SCRIPT INSIDE ANOTHER PYTHON SCRIPT
 exec(open("C:/ANIBAL/FORMATION/PERSONAL/2_autos_uciml/scripts/1_libraries_autos.py").read())
 
