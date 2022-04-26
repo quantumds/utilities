@@ -21,6 +21,10 @@
 # There is no way to clear the workspace in Julia. You need to restart the session
 # It seems that Symbol is string but we will confirm it soon
 
+# INSTALL LIBRARIES
+using Pkg # "using" keyword must be always in lowerkeys
+Pkg.add("CSV")  # CSV is the name of the library
+
 # LENGTH OF A VECTOR OR LENGTH OF A LIST
 size(name_of_list)
 
