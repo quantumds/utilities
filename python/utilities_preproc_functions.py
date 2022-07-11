@@ -28,6 +28,9 @@ pd.options.display.max_columns = None
 # SEE ALL ROWS:
 pd.options.display.max_rows = None
 
+# PIP INSTALL REQUIREMENTS
+pip install -r requirements.txt
+
 # DELETE VARIABLES / CLEAR WORKSPACE / CLEAR WORK SPACE 
  %reset -f 
 
