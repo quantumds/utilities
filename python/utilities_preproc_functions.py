@@ -1757,3 +1757,35 @@ properties[directories_routes']['complete_path_to_model'] # Example of accessing
 from IPython.display import Image
 Image(filename="C:/ANIBAL/FORMATION/PERSONAL/feature_engineering_for_machine_learning/name_of_file.PNG")
 
+# PROPERTIES CORRECTED FUNCTION
+def props_import(yaml_location_path):
+    """
+    Function that imports properties objects of the project.
+
+    Returns
+    -------
+    dict: a Python dictionary with 6 keys: "repo", "yaml_location", "root", "yaml_file", "properties_general", "props".
+    """
+    # We use git library to get the source directory of repo (A part):
+    repo = git.Repo(search_parent_directories=True)
+    # We create the extension where the "properties.yaml" file exists (B part)
+    yaml_location = yaml_location_path
+    # We transform "repo" object which is in git format to Windows path string format:
+    root = Path(repo.working_tree_dir)
+    # Connecting A and B parts:
+    yaml_file = os.path.join(root, yaml_location)
+    # Import properties.yaml file:
+    with open(yaml_file) as file:
+        properties_general = yaml.load(file, Loader=yaml.BaseLoader)
+    # Create all properties dictionary:
+    props = dict.fromkeys(properties_general["properties"])
+    # Load other properties:
+    for key in properties_general["properties"].keys():
+        with open(os.path.join(Path(root), Path(properties_general["properties"][str(key)]))) as file:
+            props[str(key)] = yaml.load(file, Loader=yaml.BaseLoader)
+    return {"repo": repo,
+            "yaml_location": yaml_location,
+            "root": root,
+            "yaml_file": yaml_file,
+            "properties_general": properties_general,
+            "props": props}
