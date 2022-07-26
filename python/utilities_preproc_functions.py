@@ -1771,10 +1771,10 @@ def props_import(yaml_location_path):
     """
     # We use git library to get the source directory of repo (A part):
     repo = git.Repo(search_parent_directories=True)
-    # We create the extension where the "properties.yaml" file exists (B part)
-    yaml_location = yaml_location_path
     # We transform "repo" object which is in git format to Windows path string format:
     root = Path(repo.working_tree_dir)
+    # We create the extension where the "properties.yaml" file exists (B part)
+    yaml_location = yaml_location_path
     # Connecting A and B parts:
     yaml_file = os.path.join(root, yaml_location)
     # Import properties.yaml file:
