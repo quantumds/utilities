@@ -24,7 +24,12 @@
 
 # VENV VIRTUAL ENVIRONMENT SOURCE PYTHON VIRTUAL ENVIRONMENT ACTIVATE
 source C:/Projects/2b9d13-accelerate-time-to-value-model/venv/Scripts/activate
-  
+
+# POWERSHELL ACTIVATION FOR VENV IN PYCHARM
+# It requires opening before Powershell in Admin Mode
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+# It requires after pressing option "A" ("Yes to All")
+
 # SEE ALL COLUMNS:
 pd.options.display.max_columns = None
 
