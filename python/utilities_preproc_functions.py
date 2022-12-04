@@ -22,6 +22,9 @@
 # XLRD:
 # xlrd should be version 1.2.0 when installing with pip command.
 
+# VENV VIRTUAL ENVIRONMENT SOURCE PYTHON VIRTUAL ENVIRONMENT ACTIVATE
+C:/Projects/2b9d13-accelerate-time-to-value-model/venv/Scripts/activate
+  
 # SEE ALL COLUMNS:
 pd.options.display.max_columns = None
 
