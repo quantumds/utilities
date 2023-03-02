@@ -19,6 +19,9 @@
 # FIND COLUMN NAMES THAT CONTAIN SPECIFIC STRING
 [col for col in df.columns if '_y' in col]  # Searching for column names with "_x" in name (as if they were duplicated).
 
+# GUARANTEE TRAIN AND TEST SETS HAVE VARIABLES / FEATURES IN THE SAME ORDER
+X_test = X_test.reindex(columns = X_train.columns, fill_value=0)
+
 # XLRD:
 # xlrd should be version 1.2.0 when installing with pip command.
 
