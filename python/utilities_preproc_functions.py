@@ -168,7 +168,7 @@ os.chdir(path_route)
 %matplotlib inline
 from matplotlib import pyplot as plt
 
-# WATCH ALL COLUMNS IN DATAFRAME / SEE ALL COLUMNS IN DATA FRAME / VIEW ALL COLUMNS IN TABLE
+# WATCH ALL COLUMNS IN DATAFRAME / SEE ALL COLUMNS IN DATA FRAME / VIEW ALL COLUMNS IN TABLE / JUPYTER WATCH ALL COLUMNS
 import pandas as pd
 from IPython.display import display
 pd.options.display.max_columns = None
