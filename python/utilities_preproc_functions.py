@@ -1,3 +1,24 @@
+# Obtain HEAD in git repo automatically / Project Structure / Source Folder / Directory / master / avoid hardcoding
+import subprocess
+import os
+from IPython.display import Image, display
+
+# Get the absolute path to the Git repo root (HEAD)
+def get_git_root():
+    return subprocess.run(
+        ['git', 'rev-parse', '--show-toplevel'],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.DEVNULL,
+        text=True
+    ).stdout.strip()
+
+name_file = "comparison.PNG"  # This is an example of a file located in 'images' folder
+# Build the full image path
+repo_root = get_git_root()
+image_path = os.path.join(repo_root, "images", name_file)  # 'images' is the folder inside the HEAD git repo folder
+# Display if found
+display(Image(filename=image_path))
+
 # Negation in Python is: ~ instead of: !
 # We must always convert all columns with its respective types. "Repass" the correct types. joblib y groupby require it.
 
