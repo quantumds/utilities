@@ -19,6 +19,11 @@ image_path = os.path.join(repo_root, "images", name_file)  # 'images' is the fol
 # Display if found
 display(Image(filename=image_path))
 
+# RUN JUPYTER NOTEBOOK OUTSIDE JUPYTER NOTEBOOK
+from utils import repo_root  # You need to create a new file named utils.py at same level as your current notebook ATTENTION! Name is utils.py not utils.ipynb IT IS A PYTHON FLAT FILE
+from IPython.display import Image, display
+import os
+
 # Negation in Python is: ~ instead of: !
 # We must always convert all columns with its respective types. "Repass" the correct types. joblib y groupby require it.
 
