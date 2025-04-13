@@ -1,4 +1,4 @@
-# Obtain HEAD in git repo automatically / Project Structure / Source Folder / Directory / master / avoid hardcoding
+# OBTAIN HEAD IN GIT REPO AUTOMATICALLY / PROJECT STRUCTURE / SOURCE FOLDER / DIRECTORY / MASTER / AVOID HARDCODING
 import subprocess
 import os
 from IPython.display import Image, display
